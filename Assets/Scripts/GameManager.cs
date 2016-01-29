@@ -20,7 +20,22 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update ()
+    {
+        if (Input.GetMouseButtonDown(0))
+        { // if left button pressed...
+            Ray ray = GameManager.Istance.camera3d.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                Pickable pickable = hit.collider.gameObject.GetComponent<Pickable>();
+
+                if (pickable)
+                {
+                    pickable.hit();
+                }
+            }
+        }
+    }
 }
