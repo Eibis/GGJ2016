@@ -4,8 +4,9 @@ using System.Collections;
 public class Pickable : MonoBehaviour {
 
     private Vector3 initial_position;
-    bool moved = false; 
+    bool moved = false;
 
+    public Vector3 ritual_position; 
 	// Use this for initialization
 	void Start () {
 
@@ -21,10 +22,24 @@ public class Pickable : MonoBehaviour {
         { // if left button pressed...
             Ray ray = GameManager.Istance.camera3d.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
             if (Physics.Raycast(ray, out hit))
             {
-                moved = !moved;
-                Debug.Log("clicked");
+                if (hit.collider.gameObject.GetComponent<Pickable>())
+                { 
+                    if(moved)
+                    {
+                        transform.position = initial_position;
+                        GameManager.Istance.object_picked.Remove(this);
+                    }
+                    else
+                    {
+                        transform.position = ritual_position;
+                        GameManager.Istance.object_picked.Add(this);
+                    }
+                    moved = !moved;
+                    Debug.Log("clicked");
+                }
             }
         }
 
