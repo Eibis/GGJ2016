@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Keys : MonoBehaviour {
 	int jump_speed = 150;
@@ -69,4 +70,14 @@ public class Keys : MonoBehaviour {
 
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+            Die();
+    }
+
+    public void Die()
+    {
+        GameManager.Istance.LoadCheckpoint();
+    }
 }
