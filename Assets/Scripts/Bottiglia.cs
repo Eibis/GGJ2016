@@ -3,13 +3,30 @@ using System.Collections;
 
 public class Bottiglia : Pickable
 {
-	void Start ()
+    public new void hit()
     {
-	
-	}
-	
-	void Update ()
+        if (moved)
+        {
+            rimuovi();
+        }
+        else
+        {
+            aggiungi();
+        }
+
+        moved = !moved;
+    }
+
+
+    public new void aggiungi()
     {
-	
-	}
+        base.aggiungi();
+        GameManager.Istance.set_lava();
+    }
+
+    public new void rimuovi()
+    {
+        base.rimuovi();
+        GameManager.Istance.set_lava();
+    }
 }

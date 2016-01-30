@@ -18,9 +18,15 @@ public class GameManager : MonoBehaviour {
     public List<Pickable> object_picked;
 
     public Transform checkpoint;
-    
-	// Use this for initialization
-	void Start ()
+
+    private bool lava_active = false;
+    private bool double_jump = false;
+    private bool fireballing = false;
+
+    private Lava[] lavas;
+
+    // Use this for initialization
+    void Start ()
     {
         _this = this;
         object_picked = new List<Pickable>();
@@ -37,6 +43,8 @@ public class GameManager : MonoBehaviour {
         }
 
         checkpoint = transform;
+
+        lavas = (Lava [] ) FindObjectsOfType<Lava>();
     }
 	
 	// Update is called once per frame
@@ -77,5 +85,32 @@ public class GameManager : MonoBehaviour {
     public void LoadCheckpoint()
     {
         character_2d.transform.position = checkpoint.position;
+    }
+
+    public void set_lava()
+    {
+        lava_active = !lava_active;
+
+        if (lava_active)
+        {
+            foreach (Lava lava in lavas)
+            {
+                lava.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (Lava lava in lavas)
+            {
+                lava.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void set_double_jump()
+    {
+        double_jump = !double_jump;
+        
+        //character_2d.GetComponent<Keys>()
     }
 }
