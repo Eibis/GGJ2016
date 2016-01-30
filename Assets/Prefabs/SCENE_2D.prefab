@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &100998
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 454424}
-  m_Layer: 0
-  m_Name: Terrain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &115906
 GameObject:
   m_ObjectHideFlags: 0
@@ -49,7 +34,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &162584
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -139,7 +124,7 @@ Transform:
   m_Children:
   - {fileID: 478390}
   - {fileID: 427268}
-  - {fileID: 454424}
+  - {fileID: 450816}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &450816
@@ -149,22 +134,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162584}
   m_LocalRotation: {x: -0.003966808, y: 0, z: 0, w: 0.99999213}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.73, z: 0}
   m_LocalScale: {x: 1000, y: 10, z: 1}
   m_Children: []
-  m_Father: {fileID: 454424}
-  m_RootOrder: 0
---- !u!4 &454424
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.73, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 450816}
   m_Father: {fileID: 427658}
   m_RootOrder: 2
 --- !u!4 &478390
@@ -174,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 5.6, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 427658}
@@ -199,7 +171,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -316,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0de647c8f5bbe45b5105fac9588022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Demon: {fileID: 0}
+  Demon: {fileID: 170474}
 --- !u!114 &11490296
 MonoBehaviour:
   m_ObjectHideFlags: 1
