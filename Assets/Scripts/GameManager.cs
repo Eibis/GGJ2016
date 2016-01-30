@@ -37,5 +37,10 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton2))
+        {
+
+        }
     }
 }

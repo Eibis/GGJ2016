@@ -10,7 +10,7 @@ public class FadeText : MonoBehaviour
     {
         _this = this;
 
-        Fade(3, "teeest");
+        Fade(4, "teeest");
     }
 	
 	void Update ()
@@ -34,7 +34,7 @@ public class FadeText : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            color.a = Mathf.Lerp(1, 0, time / timer);
+            color.a = Mathf.Lerp(1, 0, 1 - timer / time);
             GetComponent<Image>().color = color;
 
             yield return null;
