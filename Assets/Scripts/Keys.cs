@@ -6,15 +6,31 @@ public class Keys : MonoBehaviour {
     int lateral_speed = 30;
     Vector3 wrld;
 	float half_sz;
+    bool isGrounded;
+    float old_y = 0;
+    float timer = 20f;
+    bool timer_started;
 
-	void Start() {
+    void Start() {
 		wrld = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0.0f, 0.0f));
 		half_sz = this.transform.GetChild(0).GetComponent<Renderer>().bounds.size.x/2;
+        old_y = this.transform.position.y;
 	}
 
-	// Update is called once per frame
-	void FixedUpdate () {
-        
+    public void Update()
+    {
+        if (timer_started)
+        {
+            StartCoroutine(start_countdown());
+            timer_started = false;
+        }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
+    {
+
+        isGrounded = old_y>=this.transform.position.y && Physics2D.Linecast(this.transform.position, transform.position - new Vector3(0, 0.5f, 0), 1 << LayerMask.NameToLayer("Ground"));
 		if (Input.GetKey ("right") || Input.GetAxis("Horizontal") > 0) {
 			transform.position += Vector3.right * lateral_speed * Time.deltaTime;
 		}
@@ -26,14 +42,42 @@ public class Keys : MonoBehaviour {
 			this.transform.position = new Vector3(-wrld.x + half_sz,
 												  this.transform.position.y,
 											      this.transform.position.z);
-	}
+        if (isGrounded && (Input.GetKey("up") || Input.GetKey(KeyCode.JoystickButton0)))
+        {
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_speed, ForceMode2D.Impulse);
+        }
+        old_y = this.transform.position.y;
+    }
 
-	void OnCollisionStay2D(Collision2D coll)
-	{
-		if (coll.gameObject.tag == "Ground" && (Input.GetKey("up") || Input.GetKey(KeyCode.JoystickButton0))) {
-			GetComponent<Rigidbody2D>().AddForce (Vector2.up * jump_speed, ForceMode2D.Impulse);
-		}
-	}
+    public void start_timer()
+    {
+        timer_started = true;
+    }
 
+    public IEnumerator start_countdown()
+    {
+        bool spenta = false;
+        int timer_tmp = 20;
+
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+
+            int check = (int)(((timer_tmp - timer) - (int) (timer_tmp - timer))*100);
+
+            Debug.Log(check);
+
+            if (timer < 3 && timer > 0)
+                GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
+            else
+                GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 1;
+
+            yield return null;
+        }
+
+        GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
+
+
+    }
 
 }
