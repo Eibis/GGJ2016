@@ -4,7 +4,7 @@ using System.Collections;
 public class Pickable : MonoBehaviour {
 
     private Vector3 initial_position;
-    bool moved = false;
+    protected bool moved = false;
 
     public Vector3 ritual_position; 
 

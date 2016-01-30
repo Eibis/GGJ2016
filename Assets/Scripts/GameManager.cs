@@ -33,11 +33,10 @@ public class GameManager : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 2.25f))
             {
-                Pickable pickable = hit.collider.gameObject.GetComponent<Pickable>();
 
-                if (pickable)
+                if (hit.collider.CompareTag("Pickable"))
                 {
-                    pickable.hit();
+                    hit.collider.SendMessage("hit");
                 }
             }
         }
