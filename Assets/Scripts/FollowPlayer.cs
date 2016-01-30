@@ -7,6 +7,8 @@ public class FollowPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate()
     {
-        this.transform.position = new Vector3(Demon.transform.position.x, this.transform.position.y, this.transform.position.z);
+		this.transform.position = new Vector3(Mathf.Max(Demon.transform.position.x,0),
+											  this.transform.position.y,
+											  this.transform.position.z);
 	}
 }
