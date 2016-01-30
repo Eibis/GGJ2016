@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour {
     public void set_double_jump()
     {
         double_jump = !double_jump;
-        
-        //character_2d.GetComponent<Keys>()
+
+        character_2d.GetComponent<Keys>().double_jump_enabled = double_jump;
     }
 }
