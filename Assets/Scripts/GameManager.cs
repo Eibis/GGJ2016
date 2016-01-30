@@ -17,8 +17,11 @@ public class GameManager : MonoBehaviour {
     public GameObject character_3d;
     public List<Pickable> object_picked;
 
+    public GameObject inventory;
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         _this = this;
         object_picked = new List<Pickable>();
         scene3d.SetActive(true);
