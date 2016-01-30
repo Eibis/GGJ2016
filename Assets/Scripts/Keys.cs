@@ -15,8 +15,9 @@ public class Keys : MonoBehaviour {
     float double_jump_starting_y;
     bool falling = false;
     bool jump_released = true;
-    bool double_jump_enabled = false;
+    public bool double_jump_enabled = false;
     public bool destra = false;
+    public bool freezed = false;
 
     public void Update()
     {
@@ -25,22 +26,21 @@ public class Keys : MonoBehaviour {
             StartCoroutine(start_countdown());
             timer_started = false;
         }
-        //GameManager.Istance.object_picked.Contains(find);
     }
 
     // Update is called once per frame
     void FixedUpdate ()
     {
-        if(jumping && Physics2D.Linecast(this.transform.position, transform.position - new Vector3(0, 0.1f, 0), 1 << LayerMask.NameToLayer("Ground")))
+        if (!falling && this.GetComponent<Rigidbody2D>().velocity.y < 0)
+        {
+            falling = true;
+        }
+        if(falling && (Physics2D.Linecast(this.transform.position, transform.position - new Vector3(0, 0.4f, 0), 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(this.transform.position, transform.position - new Vector3(-this.GetComponent<BoxCollider2D>().size.x / 2, 0.4f, 0), 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(this.transform.position, transform.position - new Vector3(this.GetComponent<BoxCollider2D>().size.x / 2, 0.4f, 0), 1 << LayerMask.NameToLayer("Ground"))))
         {
             jumping = false;
             falling = false;
             double_jumping = false;
 
-        }
-        if(!falling && jumping && this.GetComponent<Rigidbody2D>().velocity.y < 0)
-        {
-            falling = true;
         }
         if(jumping && !double_jumping && !(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
@@ -53,7 +53,7 @@ public class Keys : MonoBehaviour {
             double_jump_starting_y = transform.position.y;
             jump_released = false;
         }
-        if(!jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && this.GetComponent<Rigidbody2D>().velocity.y >= 0)
+        if(!jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && !falling)
         {
             jump_starting_y = transform.position.y;
             jumping = true;
@@ -65,19 +65,22 @@ public class Keys : MonoBehaviour {
             jump_released = false;
         }
 
-        if((Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)))
+        if(!freezed)
         {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
-            destra = true;
-        }
-        else if((Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)) && !(Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)))
-        {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(-lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
-            destra = false;
-        }
-        else if(Mathf.Abs(this.GetComponent<Rigidbody2D>().velocity.x) > 0)
-        {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x * 0.5f, this.GetComponent<Rigidbody2D>().velocity.y);
+            if ((Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)))
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
+                destra = true;
+            }
+            else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)) && !(Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)))
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(-lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
+                destra = false;
+            }
+            else if (Mathf.Abs(this.GetComponent<Rigidbody2D>().velocity.x) > 0)
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x * 0.5f, this.GetComponent<Rigidbody2D>().velocity.y);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -101,6 +104,15 @@ public class Keys : MonoBehaviour {
             yield return null;
         }
         GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Debug.Log(coll.gameObject.tag);
+        if (coll.gameObject.tag == "Enemy")
+        {
+            GameManager.Istance.LoadCheckpoint();
+        }
     }
 
 }

@@ -34,7 +34,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &118372
 GameObject:
   m_ObjectHideFlags: 1
@@ -335,6 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176dae0e1f3fd814c9b46b3ca38cb053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Demon: {fileID: 0}
+  bg: {fileID: 0}
+  Foreground_liv1: {fileID: 0}
 --- !u!114 &11468284
 MonoBehaviour:
   m_ObjectHideFlags: 1
