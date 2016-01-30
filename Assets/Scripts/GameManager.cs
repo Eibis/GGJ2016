@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager Istance { get { return _this; } }
     private static GameManager _this;
     public bool is_3d = true;
-
+    public GameObject character_2d;
+    public GameObject character_3d;
     public List<Pickable> object_picked;
 
 	// Use this for initialization
