@@ -41,7 +41,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera3d: {fileID: 0}
   camera2d: {fileID: 0}
+  scene3d: {fileID: 0}
+  scene2d: {fileID: 0}
   is_3d: 1
+  character_2d: {fileID: 0}
+  character_3d: {fileID: 0}
   object_picked: []
 --- !u!1001 &100100000
 Prefab:
