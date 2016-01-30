@@ -3,20 +3,23 @@ using System.Collections;
 
 public class PallaDiFuoco : MonoBehaviour {
 
-	// Use this for initialization
-    float thrust = 0.4f;
-    
-    public Rigidbody2D rb;
+    // Use this for initialization
 
+    public Rigidbody2D rb;
+    bool direction_d;
+    void Awake()
+    {
+        direction_d = GameManager.Istance.character_2d.GetComponent<Keys>().destra;
+    }
     void Start()
     {
+        Debug.Log("start f");
         rb = GetComponent<Rigidbody2D>();
-
-        if(gameObject.GetComponent<Keys>().destra)
-
-            rb.AddForce(transform.right*1000,ForceMode2D.Impulse);
+        
+        if(direction_d)
+            rb.AddForce(transform.right*40,ForceMode2D.Impulse);
         else
-            rb.AddForce(transform.right * -1000,ForceMode2D.Impulse);
+            rb.AddForce(transform.right * -40,ForceMode2D.Impulse);
 
     }
     void Update()
