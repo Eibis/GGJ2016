@@ -22,7 +22,17 @@ public class GameManager : MonoBehaviour {
     {
         _this = this;
         object_picked = new List<Pickable>();
-        scene3d.SetActive(true);
+        
+        if (is_3d)
+        {
+            scene3d.SetActive(true);
+            scene2d.SetActive(false);
+        }
+        else
+        {
+            scene3d.SetActive(false);
+            scene2d.SetActive(true);
+        }
 	}
 	
 	// Update is called once per frame
