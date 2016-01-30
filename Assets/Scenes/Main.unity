@@ -124,9 +124,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 115906, guid: b6dfd35ef14c83c43bd1a051d2606eca, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6dfd35ef14c83c43bd1a051d2606eca, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &325737961 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 110954, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+  m_PrefabInternal: {fileID: 1198003466}
+--- !u!114 &325737963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325737961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
+--- !u!65 &325737966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325737961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4849546, y: 0.31060112, z: 0.7429824}
+  m_Center: {x: 0, y: 0.15972969, z: 0.00058598816}
 --- !u!1 &883824308
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,9 +370,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 158788, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d10cd84eee2981244bfce01efb115694, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1408211466 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107648, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+  m_PrefabInternal: {fileID: 1198003466}
+--- !u!114 &1408211468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408211466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
+--- !u!135 &1408211470
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408211466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13162999
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!20 &1462810994 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2073062, guid: d10cd84eee2981244bfce01efb115694,
@@ -445,9 +509,41 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 149444, guid: 462ec626241a70d4d94f205c12f59aba, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 462ec626241a70d4d94f205c12f59aba, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1909034021 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151916, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+  m_PrefabInternal: {fileID: 1198003466}
+--- !u!65 &1909034023
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909034021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1909034024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909034021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
 --- !u!20 &2022418577 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2040876, guid: b6dfd35ef14c83c43bd1a051d2606eca,

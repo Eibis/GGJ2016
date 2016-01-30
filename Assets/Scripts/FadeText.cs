@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FadeText : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class FadeText : MonoBehaviour
     {
         _this = this;
 
-        start_fade(3, "teeest");
+        Fade(3, "teeest");
     }
 	
 	void Update ()
@@ -19,6 +20,7 @@ public class FadeText : MonoBehaviour
 
     public static void Fade(int time, string text)
     {
+        _this.GetComponentInChildren<Text>().text = text;
         _this.StartCoroutine(_this.start_fade(time, text));
     }
 
@@ -26,9 +28,14 @@ public class FadeText : MonoBehaviour
     {
         float timer = time;
 
+        Color color = GetComponent<Image>().color;
+
         while (timer > 0)
         {
             timer -= Time.deltaTime;
+
+            color.a = Mathf.Lerp(1, 0, time / timer);
+            GetComponent<Image>().color = color;
 
             yield return null;
         }

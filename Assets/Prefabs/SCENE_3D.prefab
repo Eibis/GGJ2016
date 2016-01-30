@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 442324}
   - 33: {fileID: 3368328}
   - 23: {fileID: 2369070}
+  - 135: {fileID: 13526868}
+  - 114: {fileID: 11498216}
   m_Layer: 0
   m_Name: Pile
   m_TagString: Untagged
@@ -28,6 +30,8 @@ GameObject:
   - 33: {fileID: 3367356}
   - 23: {fileID: 2369670}
   - 95: {fileID: 9504206}
+  - 65: {fileID: 6545964}
+  - 114: {fileID: 11417260}
   m_Layer: 0
   m_Name: cuscino
   m_TagString: Untagged
@@ -112,6 +116,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472138}
+  - 65: {fileID: 6531920}
+  - 114: {fileID: 11418920}
   m_Layer: 0
   m_Name: Telecomando
   m_TagString: Untagged
@@ -460,6 +466,30 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6531920
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6545964
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4849546, y: 0.31060112, z: 0.7429824}
+  m_Center: {x: 0, y: 0.15972969, z: 0.00058598816}
 --- !u!81 &8131742
 AudioListener:
   m_ObjectHideFlags: 1
@@ -558,6 +588,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11417260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
+--- !u!114 &11418920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
 --- !u!114 &11429810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,6 +707,30 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &11498216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
+--- !u!135 &13526868
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13162999
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &14376548
 CharacterController:
   m_ObjectHideFlags: 1

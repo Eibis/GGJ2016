@@ -11,7 +11,7 @@ public class Pickable : MonoBehaviour {
 	void Start ()
     {
 
-        initial_position = transform.position;
+        initial_position = transform.localPosition;
 
 	}
 
