@@ -14,10 +14,6 @@ public class Parallaxer : MonoBehaviour {
 	float last_camera_x_pos;
 
 	void Start() {
-		Vector3 ForeGround_Size = ForeGround.GetComponent<Renderer>().bounds.size;
-		Vector3 BackGround_Size = this.GetComponent<Renderer>().bounds.size;
-		float x_ratio = ForeGround_Size.x / BackGround_Size.x;
-
 		starting_x = ForeGround.GetComponent<Renderer>().bounds.min.x + this.GetComponent<Renderer>().bounds.size.x / 2 + x_offset;
 		starting_y = ForeGround.GetComponent<Renderer>().bounds.min.y + this.GetComponent<Renderer>().bounds.size.y / 2 + y_offset;
 		this.transform.position = new Vector3 (starting_x, starting_y, this.transform.position.z);

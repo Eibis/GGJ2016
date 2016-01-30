@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - Pickable
   - Enemy
-  - Arma
   layers:
   - Default
   - TransparentFX

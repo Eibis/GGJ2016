@@ -10,15 +10,13 @@ public class PallaDiFuoco : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log("start");
         rb = GetComponent<Rigidbody2D>();
-        transform.position = new Vector3(0f, 10f, 0f);
 
         if(gameObject.GetComponent<Keys>().destra)
 
-            rb.AddForce(transform.right*500);
+            rb.AddForce(transform.right*1000,ForceMode2D.Impulse);
         else
-            rb.AddForce(transform.right * -500);
+            rb.AddForce(transform.right * -1000,ForceMode2D.Impulse);
 
     }
     void Update()
