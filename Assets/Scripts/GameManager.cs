@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton1))
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton1)) && is_3d)
         { 
             Ray ray = GameManager.Istance.camera3d.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
