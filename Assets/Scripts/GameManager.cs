@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour {
 
     public Transform checkpoint;
 
-    private bool lava_active = false;
-    private bool lava_to_active = false;
+    private bool lava_active = true;
+    private bool lava_to_active = true;
 
     private bool double_jump = false;
     private bool fireballing = false;
 
-    private Lava[] lavas;
+    public Lava[] lavas;
 
     // Use this for initialization
     void Start ()
@@ -77,7 +77,8 @@ public class GameManager : MonoBehaviour {
                 {
                     lavas = (Lava[])FindObjectsOfType<Lava>();
 
-                    set_lava();
+                    if (lavas != null)
+                        set_lava_int();
                 }
             }
             else
@@ -95,6 +96,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public void set_lava()
+    {
+        lava_to_active = !lava_active;
+    }
+
+    public void set_lava_int()
     {
         lava_active = !lava_active;
 

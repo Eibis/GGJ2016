@@ -108,7 +108,6 @@ public class Keys : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log(coll.gameObject.tag);
         if (coll.gameObject.tag == "Enemy")
         {
             GameManager.Istance.LoadCheckpoint();
