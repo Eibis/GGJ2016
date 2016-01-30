@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
     public GameObject character_3d;
     public List<Pickable> object_picked;
 
+    public Transform checkpoint;
+    
 	// Use this for initialization
 	void Start ()
     {
@@ -33,7 +35,9 @@ public class GameManager : MonoBehaviour {
             scene3d.SetActive(false);
             scene2d.SetActive(true);
         }
-	}
+
+        checkpoint = transform;
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -68,5 +72,10 @@ public class GameManager : MonoBehaviour {
                 scene2d.SetActive(false);
             }
         }
+    }
+
+    public void LoadCheckpoint()
+    {
+        character_2d.transform.position = checkpoint.position;
     }
 }
