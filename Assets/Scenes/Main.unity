@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &548483993
 Transform:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1008193066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2030244375}
@@ -759,6 +759,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1263349245 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 140908, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+  m_PrefabInternal: {fileID: 1685985515}
+--- !u!114 &1263349249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263349245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee4898ecfda27d43b2cf168a0108ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
 --- !u!1 &1271736603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1073,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1393121961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.040001, y: 0, z: 0}
+  m_LocalPosition: {x: 2.040001, y: 0, z: -6}
   m_LocalScale: {x: 2.2, y: 2.2, z: 2}
   m_Children: []
   m_Father: {fileID: 1008193067}
@@ -1281,7 +1297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1619946747
 Transform:
   m_ObjectHideFlags: 0
@@ -1359,13 +1375,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1657400841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3599295e153aa1409660bf1f7a330f1, type: 3}
+  m_Script: {fileID: 11500000, guid: c9cacd7f17e17124f956e7bef3371a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptySize: 1
-  ForeGround: {fileID: 0}
+  percent_out: 0.1
+  ForeGround: {fileID: 1271736603}
+  Camera: {fileID: 1907599126}
   x_offset: 0
-  y_offset: 0
+  y_offset: -50
+  parallax_y: 1
 --- !u!212 &1657400844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1440,6 +1458,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 96a609b15373d1d4693434dcf5c86408, type: 2}
+    - target: {fileID: 158788, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d10cd84eee2981244bfce01efb115694, type: 2}
   m_IsPrefabParent: 0
@@ -1520,7 +1542,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907599126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0de647c8f5bbe45b5105fac9588022, type: 3}
+  m_Script: {fileID: 11500000, guid: 176dae0e1f3fd814c9b46b3ca38cb053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Demon: {fileID: 1403009764}

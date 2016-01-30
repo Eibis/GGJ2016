@@ -16,6 +16,5 @@ public class CameraMovement : MonoBehaviour {
 		this.transform.position = new Vector3(new_x_position,
 											  this.transform.position.y,
 											  this.transform.position.z);
-        //bg.transform.position = new Vector3(bg.transform.position.x + ((startingPosition.x - transform.position.x) * bg_lateral_speed), bg.transform.position.y, bg.transform.position.z);
-    }
+     }
 }
