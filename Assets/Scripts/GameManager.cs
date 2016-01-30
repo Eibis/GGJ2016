@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
     public Transform checkpoint;
 
     private bool lava_active = false;
+    private bool lava_to_active = false;
+
     private bool double_jump = false;
     private bool fireballing = false;
 
@@ -43,8 +45,6 @@ public class GameManager : MonoBehaviour {
         }
 
         checkpoint = transform;
-
-        lavas = (Lava [] ) FindObjectsOfType<Lava>();
     }
 	
 	// Update is called once per frame
@@ -72,6 +72,13 @@ public class GameManager : MonoBehaviour {
                 is_3d = false;
                 scene3d.SetActive(false);
                 scene2d.SetActive(true);
+
+                if (lava_active != lava_to_active)
+                {
+                    lavas = (Lava[])FindObjectsOfType<Lava>();
+
+                    set_lava();
+                }
             }
             else
             {
@@ -90,6 +97,8 @@ public class GameManager : MonoBehaviour {
     public void set_lava()
     {
         lava_active = !lava_active;
+
+        lava_to_active = lava_active;
 
         if (lava_active)
         {
