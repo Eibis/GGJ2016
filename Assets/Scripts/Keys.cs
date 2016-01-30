@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Keys : MonoBehaviour {
-	int jump_speed = 150;
-    int lateral_speed = 30;
+	public int jump_speed = 150;
+    public int lateral_speed = 30;
     Vector3 wrld;
 	float half_sz;
     bool isGrounded;
@@ -37,6 +37,8 @@ public class Keys : MonoBehaviour {
 		if (Input.GetKey ("left") || Input.GetAxis("Horizontal") < 0) {
 			transform.position -= Vector3.right * lateral_speed * Time.deltaTime;
 		}
+		if (Input.GetKey ("up"))
+			transform.position += Vector3.up * lateral_speed * Time.deltaTime;
 
 		if (this.transform.position.x < (- wrld.x + half_sz))
 			this.transform.position = new Vector3(-wrld.x + half_sz,
@@ -44,7 +46,7 @@ public class Keys : MonoBehaviour {
 											      this.transform.position.z);
         if (isGrounded && (Input.GetKey("up") || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W)))
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_speed, ForceMode2D.Impulse);
+            //GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_speed, ForceMode2D.Impulse);
         }
         old_y = this.transform.position.y;
     }
