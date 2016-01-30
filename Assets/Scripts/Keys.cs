@@ -16,7 +16,7 @@ public class Keys : MonoBehaviour {
     bool falling = false;
     bool jump_released = true;
     bool double_jump_enabled = false;
-    bool destra = false;
+    public bool destra = false;
 
     public void Update()
     {
@@ -78,6 +78,11 @@ public class Keys : MonoBehaviour {
         else if(Mathf.Abs(this.GetComponent<Rigidbody2D>().velocity.x) > 0)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x * 0.5f, this.GetComponent<Rigidbody2D>().velocity.y);
+        }
+
+        if ((Input.GetKey(KeyCode.LeftControl)))
+        {
+            Instantiate(Resources.Load<GameManager>("PallaDiFuoco"));
         }
     }
 
