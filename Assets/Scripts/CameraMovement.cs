@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour {
     float bg_lateral_speed = 0.1f;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
 		Vector3 startingPosition = transform.position;
 		float new_left_bounded_x_position = Mathf.Max(Demon.transform.position.x, Foreground_liv1.GetComponent<Renderer> ().bounds.min.x + this.GetComponent<Camera> ().orthographicSize * Screen.width / Screen.height);

@@ -30,20 +30,22 @@ public class Keys : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate ()
     {
-        if(jumping && Physics2D.Linecast(this.transform.position, transform.position - new Vector3(0, 0.1f, 0), 1 << LayerMask.NameToLayer("Ground")))
+        if (!falling && this.GetComponent<Rigidbody2D>().velocity.y < 0)
+        {
+            falling = true;
+            Debug.Log("falling");
+        }
+        if (falling && (Physics2D.Linecast(this.transform.position, transform.position - new Vector3(0, 0.4f, 0), 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(this.transform.position, transform.position - new Vector3(-this.GetComponent<BoxCollider2D>().size.x / 2, 0.4f, 0), 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(this.transform.position, transform.position - new Vector3(this.GetComponent<BoxCollider2D>().size.x / 2, 0.4f, 0), 1 << LayerMask.NameToLayer("Ground"))))
         {
             jumping = false;
             falling = false;
             double_jumping = false;
-
-        }
-        if(!falling && jumping && this.GetComponent<Rigidbody2D>().velocity.y < 0)
-        {
-            falling = true;
+            Debug.Log("on_ground");
         }
         if(jumping && !double_jumping && !(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
             jump_released = true;
+            Debug.Log("jump_released");
         }
         if(double_jump_enabled && jumping && jump_released && !double_jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
@@ -51,17 +53,20 @@ public class Keys : MonoBehaviour {
             double_jumping = true;
             double_jump_starting_y = transform.position.y;
             jump_released = false;
+            Debug.Log("start_double_jumping");
         }
-        if(!jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && this.GetComponent<Rigidbody2D>().velocity.y >= 0)
+        if(!jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && !falling)
         {
             jump_starting_y = transform.position.y;
             jumping = true;
             jump_released = false;
+            Debug.Log("start_jumping");
         }
         if(jumping && !falling && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && ((transform.position.y - jump_starting_y) < jumping_height || (double_jumping && (transform.position.y - double_jump_starting_y) < jumping_height)))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump_speed);
             jump_released = false;
+            Debug.Log("keep_jumping");
         }
 
         if((Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)))
