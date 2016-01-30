@@ -2,10 +2,9 @@
 using System.Collections;
 
 public class Keys : MonoBehaviour {
-
 	int jump_speed = 150;
     int lateral_speed = 30;
-	Vector3 wrld;
+    Vector3 wrld;
 	float half_sz;
 
 	void Start() {
@@ -15,6 +14,7 @@ public class Keys : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+        
 		if (Input.GetKey ("right")) {
 			transform.position += Vector3.right * lateral_speed * Time.deltaTime;
 		}
