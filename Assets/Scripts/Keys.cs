@@ -61,11 +61,6 @@ public class Keys : MonoBehaviour {
         {
             timer -= Time.deltaTime;
             
-            if (timer < 3 && timer > 0)
-                GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
-            else
-                GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 1;
-
             yield return null;
         }
 
