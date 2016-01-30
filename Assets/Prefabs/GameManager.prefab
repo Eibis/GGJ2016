@@ -48,6 +48,7 @@ MonoBehaviour:
   character_3d: {fileID: 0}
   object_picked: []
   checkpoint: {fileID: 0}
+  lavas: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
