@@ -11,8 +11,11 @@ public class Parallaxer : MonoBehaviour {
 	void Start() {
 		float starting_x = ForeGround.GetComponent<Renderer> ().bounds.min.x + this.GetComponent<Renderer> ().bounds.size.x / 2 + x_offset;
 		float starting_y = ForeGround.GetComponent<Renderer> ().bounds.min.y + this.GetComponent<Renderer> ().bounds.size.y / 2 + y_offset;
-		this.transform.position = new Vector2 (starting_x, starting_y);   
+		this.transform.position = new Vector2 (starting_x, starting_y);
+
+
 	}
+		
 
 	// Update is called once per frame
 	void Update () {
