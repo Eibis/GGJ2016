@@ -8,8 +8,6 @@ public class Pickable : MonoBehaviour {
 
     public Vector3 ritual_position;
 
-    public Sprite icon;
-
 	void Start ()
     {
 
