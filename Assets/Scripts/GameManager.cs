@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour {
     public Camera camera3d;
     public Camera camera2d;
 
+    public GameObject scene3d;
+    public GameObject scene2d;
+
     public static GameManager Istance { get { return _this; } }
     private static GameManager _this;
     public bool is_3d = true;
@@ -41,7 +44,18 @@ public class GameManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton2))
         {
-
+            if (is_3d)
+            {
+                is_3d = false;
+                scene3d.SetActive(false);
+                scene2d.SetActive(true);
+            }
+            else
+            {
+                is_3d = true;
+                scene3d.SetActive(true);
+                scene2d.SetActive(false);
+            }
         }
     }
 }

@@ -15,10 +15,10 @@ public class Keys : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
-		if (Input.GetKey ("right")) {
+		if (Input.GetKey ("right") || Input.GetAxis("Horizontal") > 0) {
 			transform.position += Vector3.right * lateral_speed * Time.deltaTime;
 		}
-		if (Input.GetKey ("left")) {
+		if (Input.GetKey ("left") || Input.GetAxis("Horizontal") < 0) {
 			transform.position -= Vector3.right * lateral_speed * Time.deltaTime;
 		}
 
@@ -30,7 +30,7 @@ public class Keys : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "Ground" && (Input.GetKey("up"))) {
+		if (coll.gameObject.tag == "Ground" && (Input.GetKey("up") || Input.GetKey(KeyCode.JoystickButton0))) {
 			GetComponent<Rigidbody2D>().AddForce (Vector2.up * jump_speed, ForceMode2D.Impulse);
 		}
 	}
