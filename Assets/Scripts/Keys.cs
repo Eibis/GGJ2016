@@ -56,17 +56,11 @@ public class Keys : MonoBehaviour {
 
     public IEnumerator start_countdown()
     {
-        bool spenta = false;
-        int timer_tmp = 20;
 
         while (timer > 0)
         {
             timer -= Time.deltaTime;
-
-            int check = (int)(((timer_tmp - timer) - (int) (timer_tmp - timer))*100);
-
-            Debug.Log(check);
-
+            
             if (timer < 3 && timer > 0)
                 GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
             else
