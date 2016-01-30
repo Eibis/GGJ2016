@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour {
 	void Update ()
     {
         if (Input.GetMouseButtonDown(0))
-        { // if left button pressed...
+        { 
             Ray ray = GameManager.Istance.camera3d.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 2.25f))
             {
                 Pickable pickable = hit.collider.gameObject.GetComponent<Pickable>();
 
