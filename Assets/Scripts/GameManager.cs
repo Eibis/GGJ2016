@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour {
     public GameObject character_3d;
     public List<Pickable> object_picked;
 
-    public GameObject inventory;
-
 	// Use this for initialization
 	void Start ()
     {

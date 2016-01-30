@@ -4,39 +4,34 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    RenderTexture[] rt;
     GameObject prefab;
 
-    void Start()
+    void Awake()
     {
         prefab = Resources.Load<GameObject>("InventoryItem");
     }
 
     void OnEnable()
     {
-        if(rt != null)
-        { 
-            for (int i = 0; i < rt.Length; i++)
-                rt[i].Release();
-        }
 
-        foreach (Transform child in transform)
+        if (GameManager.Istance == null || prefab == null)
+            return;
+
+        foreach (Transform child in transform.GetChild(0))
         {
             Destroy(child.gameObject);
         }
 
-        rt = new RenderTexture[GameManager.Istance.object_picked.Count];
-
         for (int i = 0;  i < GameManager.Istance.object_picked.Count; i++)
         {
-            rt[i] = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
-            rt[i].Create();
+            if (GameManager.Istance.object_picked[i].icon == null)
+                continue;
 
             GameObject temp = Instantiate(prefab);
-            temp.transform.parent = transform;
-            temp.GetComponent<RawImage>().texture = rt[i];
+            temp.transform.SetParent(transform.GetChild(0));
+            temp.GetComponent<Image>().overrideSprite = GameManager.Istance.object_picked[i].icon;
         }
 
-        LayoutRebuilder.MarkLayoutForRebuild((RectTransform)transform);
+        LayoutRebuilder.MarkLayoutForRebuild((RectTransform)transform.GetChild(0));
     }
 }

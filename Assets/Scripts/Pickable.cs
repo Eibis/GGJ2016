@@ -6,7 +6,9 @@ public class Pickable : MonoBehaviour {
     private Vector3 initial_position;
     protected bool moved = false;
 
-    public Vector3 ritual_position; 
+    public Vector3 ritual_position;
+
+    public Sprite icon;
 
 	void Start ()
     {
