@@ -3,23 +3,19 @@ using System.Collections;
 
 public class Keys : MonoBehaviour {
 
-	int jumpSpeed = 100;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
+	int jumpSpeed = 150;
+    float lateral_speed = 0.5f;
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (Input.GetKey ("right")) {
 			Vector3 position = this.transform.position;
-			position.x++;
+			position.x += lateral_speed;
 			this.transform.position = position;
 		}
 		if (Input.GetKey ("left")) {
 			Vector3 position = this.transform.position;
-			position.x--;
+			position.x -= lateral_speed;
 			this.transform.position = position;
 		}
 	}
