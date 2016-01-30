@@ -19,16 +19,25 @@ public class Pickable : MonoBehaviour {
     {
         if (moved)
         {
-            transform.localPosition = initial_position;
-            GameManager.Istance.object_picked.Remove(this);
+            rimuovi();
         }
         else
         {
-            transform.localPosition = ritual_position;
-            GameManager.Istance.object_picked.Add(this);
+            aggiungi();
         }
 
         moved = !moved;
     }
-    
+
+    public void aggiungi()
+    {
+        transform.localPosition = ritual_position;
+        GameManager.Istance.object_picked.Add(this);
+    }
+
+    public void rimuovi()
+    {
+        transform.localPosition = initial_position;
+        GameManager.Istance.object_picked.Remove(this);
+    }
 }
