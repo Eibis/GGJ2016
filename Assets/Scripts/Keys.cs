@@ -83,9 +83,11 @@ public class Keys : MonoBehaviour {
             }
         }
 
-        if ((Input.GetKey(KeyCode.LeftControl)))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            Instantiate(Resources.Load<GameManager>("PallaDiFuoco"));
+
+            Instantiate(Resources.Load("PallaDiFuoco"), new Vector3(transform.position.x, transform.position.y+5, transform.position.z),Quaternion.identity);
+
         }
     }
 
