@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class Keys : MonoBehaviour {
-	int jump_speed = 150;
+	int jump_speed = 500;
     int lateral_speed = 30;
     Vector3 wrld;
 	float half_sz;

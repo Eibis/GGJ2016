@@ -17,7 +17,7 @@ public class Lava : MonoBehaviour
             t.gameObject.AddComponent<Lava>();
         }
 
-        StartCoroutine(start_lava_animation());
+        //StartCoroutine(start_lava_animation());
 	}
 
     IEnumerator start_lava_animation()

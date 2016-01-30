@@ -35,7 +35,9 @@ public class GameManager : MonoBehaviour {
             scene3d.SetActive(false);
             scene2d.SetActive(true);
         }
-	}
+
+        checkpoint = transform;
+    }
 	
 	// Update is called once per frame
 	void Update ()
