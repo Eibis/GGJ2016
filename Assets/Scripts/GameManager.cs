@@ -21,12 +21,13 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         _this = this;
         object_picked = new List<Pickable>();
+        scene3d.SetActive(true);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton1))
         { 
             Ray ray = GameManager.Istance.camera3d.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

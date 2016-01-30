@@ -13,6 +13,8 @@ public class Pickable : MonoBehaviour {
 
         initial_position = transform.localPosition;
 
+        gameObject.tag = "Pickable";
+
 	}
 
     public void hit()
