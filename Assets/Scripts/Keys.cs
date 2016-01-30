@@ -16,6 +16,7 @@ public class Keys : MonoBehaviour {
     bool falling = false;
     bool jump_released = true;
     bool double_jump_enabled = false;
+    public bool destra = false;
 
     public void Update()
     {
@@ -67,14 +68,21 @@ public class Keys : MonoBehaviour {
         if((Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)))
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
+            destra = true;
         }
         else if((Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)) && !(Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)))
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(-lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
+            destra = false;
         }
         else if(Mathf.Abs(this.GetComponent<Rigidbody2D>().velocity.x) > 0)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x * 0.5f, this.GetComponent<Rigidbody2D>().velocity.y);
+        }
+
+        if ((Input.GetKey(KeyCode.LeftControl)))
+        {
+            Instantiate(Resources.Load<GameManager>("PallaDiFuoco"));
         }
     }
 
