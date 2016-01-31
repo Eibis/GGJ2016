@@ -111,8 +111,10 @@ public class Keys : MonoBehaviour {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x * 0.5f, this.GetComponent<Rigidbody2D>().velocity.y);
             }
         }
-        else
+		else{
+			this.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0,this.GetComponent<Rigidbody2D> ().velocity.y	);
             player_animator.SetFloat("movement", 0);
+		}
 
         if (fireballing)
         {
@@ -163,7 +165,7 @@ public class Keys : MonoBehaviour {
             timer -= Time.deltaTime;
             yield return null;
         }
-        GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
+        //GameManager.Istance.character_2d.GetComponentInChildren<Light>().intensity = 0;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
