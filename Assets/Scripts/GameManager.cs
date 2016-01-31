@@ -78,7 +78,10 @@ public class GameManager : MonoBehaviour {
 
                 if (lava_active != lava_to_active)
                 {
-                    lavas = (Lava[])FindObjectsOfType<Lava>();
+                    Lava [] temp = (Lava[])FindObjectsOfType<Lava>();
+
+                    if (temp != null && temp.Length > 0)
+                        lavas = temp;
 
                     if (lavas != null)
                         set_lava_int();
