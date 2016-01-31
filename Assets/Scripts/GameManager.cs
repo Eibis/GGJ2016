@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
     private bool lava_to_active = true;
 
     private bool double_jump = false;
-    private bool luce = true;
+    private bool fireballing = false;
 
 	private bool builder_up = false;
 	private bool immortality = false;
@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour {
         }
 
         checkpoint = transform;
+
+		reset_luce ();
     }
 	
 	// Update is called once per frame
@@ -100,7 +102,7 @@ public class GameManager : MonoBehaviour {
 
     public void LoadCheckpoint()
     {
-        character_2d.transform.position = checkpoint.position;
+		character_2d.transform.position = new Vector3 (checkpoint.position.x,checkpoint.position.y, 40);
     }
 
     public void set_lava()
@@ -158,13 +160,10 @@ public class GameManager : MonoBehaviour {
     public void set_accendino()
     {
         accendino = true;
-        character_2d.GetComponent<Keys>().fireballing = true;
     }
     public void reset_accendino()
     {
         accendino = false;
-        character_2d.GetComponent<Keys>().fireballing = false;
-
     }
 
     public bool get_accendino()
@@ -185,13 +184,19 @@ public class GameManager : MonoBehaviour {
 
     public void set_luce()
     {
-        luce = !luce;
-
         SpriteRenderer[] sprites = scene2d.GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer sprite in sprites)
         {
-            Texture old_texture = sprite.material.mainTexture;
-            sprite.material.shader = luce ? Shader.Find("Sprites/Default") : Shader.Find("Sprites/Diffuse");
+            sprite.material.shader = Shader.Find("Sprites/Default");
         }
     }
+
+	public void reset_luce()
+	{
+		SpriteRenderer[] sprites = scene2d.GetComponentsInChildren<SpriteRenderer>();
+		foreach (SpriteRenderer sprite in sprites)
+		{
+			sprite.material.shader = Shader.Find ("Sprites/Diffuse");
+		}
+	}
 }
