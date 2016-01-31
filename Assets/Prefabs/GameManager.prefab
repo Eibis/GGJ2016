@@ -9,6 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 427774}
   - 114: {fileID: 11480960}
+  - 82: {fileID: 8276448}
+  - 81: {fileID: 8186986}
+  - 114: {fileID: 11414814}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -28,6 +31,109 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!81 &8186986
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173130}
+  m_Enabled: 1
+--- !u!82 &8276448
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173130}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &11414814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96c5a2cae6feae4f84382a830dd25e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx_codata: {fileID: 8300000, guid: 5fa8a1a24deb79e4a95db184abab426d, type: 3}
+  sfx_colpo: {fileID: 8300000, guid: a2c1198deec5c4d41a64691e8dcff1f1, type: 3}
+  sfx_fuoco: {fileID: 8300000, guid: 767d63b8180453a489d6d7a38a20260d, type: 3}
+  sfx_impatto: {fileID: 8300000, guid: 79d9737f08a206a4db937370b879e170, type: 3}
+  sfx_menu: {fileID: 8300000, guid: f2ede48b4c0942748a7f28f0bbb8420b, type: 3}
+  sfx_morte: {fileID: 8300000, guid: 52be002bba3ac3048b4bda878597ad02, type: 3}
+  sfx_passo: {fileID: 8300000, guid: 9d25eb9a23912984f994d9cd07401e7e, type: 3}
+  sfx_presa_oggetto_corretta: {fileID: 8300000, guid: b7289f962d255a840b358d541da82965,
+    type: 3}
+  sfx_salto: {fileID: 8300000, guid: 1d9b5e781fca79a42870b8cf05372f96, type: 3}
+  source: {fileID: 8276448}
 --- !u!114 &11480960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -49,6 +155,7 @@ MonoBehaviour:
   object_picked: []
   checkpoint: {fileID: 0}
   lavas: []
+  crosshair: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -20,22 +20,20 @@ public class FadeText : MonoBehaviour
         timers = new float[6];
 
         stringArray[0] = "Era un tranquillo e sonnacchioso Giovedì di Maggio...\ntranquillo e sonnacchioso come non se ne vedevano da anni.";
-        timers[0] = 3.0f;
+        timers[0] = 7.0f;
 
         stringArray[1] = "Il buon Timmy era seduto sul pavimento della sua camera,\nmeravigliandosi di quanta sonnecchiosità potesse racchiudersi in un solo giorno.";
-        timers[1] = 6.0f;
+        timers[1] = 7.0f;
 
-        stringArray[2] = "...\nSi annoiava a morte.";
-        timers[2] = 3.0f;
-
-        stringArray[3] = "\"Potrei provare a evocare un demone dall'aldilà\" ponderò l'intrepido Timmy,\n\"È un modo come un altro di impegnare il tempo...\"";
-        timers[3] = 5.0f;
+        stringArray[2] = "...\nDevo completare il rituale, per colpa dei compiti non posso guardare l'ultima puntata dei Rockemon."+
+            "Forse mettendo uno dei miei strumenti da disegno preferiti nel pentacolo il demone verrà in mio soccorso.";
+        timers[2] = 11.0f;
 
         stringArray[4] = "Decise quindi di inaugurare il suo nuovo Demonomicon,\ndelizioso presente ricevuto dal nonno per il suo compleanno.";
-        timers[4] = 5.0f;
+        timers[3] = 7.0f;
 
         stringArray[5] = "L'impavido Timmy aprì il libro a pagina 1\ne iniziò a leggere con voce sicura la formula magica:";
-        timers[5] = 7.0f;
+        timers[4] = 7.0f;
 
         Fade();
     }
@@ -45,50 +43,18 @@ public class FadeText : MonoBehaviour
         stringArray = new string[6];
         timers = new float[6];
 
-        stringArray[0] = "Era un tranquillo e sonnacchioso Giovedì di Maggio...\ntranquillo e sonnacchioso come non se ne vedevano da anni.";
+        stringArray[0] = "Re dei demoni: \"Questa volta è il tuo turno, sei stato evocato da un altro mondo e per quanto lo odi, non puoi farne a meno, è il fato di tutti i demoni cornuti."+
+            "Ora va, a lavoro compiuto riceverai un bellissimo nuovo corno, da aggiungere alla tua collezione o magari incollarlo da qualche parte sul tuo corpo.";
         timers[0] = 3.0f;
-
-        stringArray[1] = "Il buon Timmy era seduto sul pavimento della sua camera,\nmeravigliandosi di quanta sonnecchiosità potesse racchiudersi in un solo giorno.";
-        timers[1] = 6.0f;
-
-        stringArray[2] = "...\nSi annoiava a morte.";
-        timers[2] = 3.0f;
-
-        stringArray[3] = "\"Potrei provare a evocare un demone dall'aldilà\" ponderò l'intrepido Timmy,\n\"È un modo come un altro di impegnare il tempo...\"";
-        timers[3] = 5.0f;
-
-        stringArray[4] = "Decise quindi di inaugurare il suo nuovo Demonomicon,\ndelizioso presente ricevuto dal nonno per il suo compleanno.";
-        timers[4] = 5.0f;
-
-        stringArray[5] = "L'impavido Timmy aprì il libro a pagina 1\ne iniziò a leggere con voce sicura la formula magica:";
-        timers[5] = 7.0f;
-
+        
         Fade();
     }
 
     void Level3()
     {
-        stringArray = new string[6];
-        timers = new float[6];
-
-        stringArray[0] = "Era un tranquillo e sonnacchioso Giovedì di Maggio...\ntranquillo e sonnacchioso come non se ne vedevano da anni.";
-        timers[0] = 3.0f;
-
-        stringArray[1] = "Il buon Timmy era seduto sul pavimento della sua camera,\nmeravigliandosi di quanta sonnecchiosità potesse racchiudersi in un solo giorno.";
-        timers[1] = 6.0f;
-
-        stringArray[2] = "...\nSi annoiava a morte.";
-        timers[2] = 3.0f;
-
-        stringArray[3] = "\"Potrei provare a evocare un demone dall'aldilà\" ponderò l'intrepido Timmy,\n\"È un modo come un altro di impegnare il tempo...\"";
-        timers[3] = 5.0f;
-
-        stringArray[4] = "Decise quindi di inaugurare il suo nuovo Demonomicon,\ndelizioso presente ricevuto dal nonno per il suo compleanno.";
-        timers[4] = 5.0f;
-
-        stringArray[5] = "L'impavido Timmy aprì il libro a pagina 1\ne iniziò a leggere con voce sicura la formula magica:";
-        timers[5] = 7.0f;
-
+        stringArray = new string[0];
+        timers = new float[0];
+        
         Fade();
     }
 
@@ -111,11 +77,14 @@ public class FadeText : MonoBehaviour
             {
                 timer -= Time.deltaTime;
 
-                if(timer < timers[i] / 2)
-                { 
-                    c.a = Mathf.Lerp(1, 0, 1 - timer / timers[i]);
+                if(timer < timers[i] * 2f / 3f)
+                {
+                    c.a = lerpAlpha(timers[i] / 3f); // Mathf.Lerp(1, 0, 1f - (timer / 2f) / (timers[i] / 2f));
                     GetComponentInChildren<Text>().color = c;
                 }
+
+                if (Input.anyKeyDown)
+                    break;
 
                 yield return null;
             }
@@ -132,12 +101,23 @@ public class FadeText : MonoBehaviour
         {
             timer_ -= Time.deltaTime;
 
-            c_.a = Mathf.Lerp(1, 0, 1 - timer_ / 3.0f);
+            c_.a = lerpAlpha(2f);
             GetComponent<Image>().color = c_;
+
+            if (timer_ < 0)
+                break;
 
             yield return null;
         }
 
         gameObject.SetActive(false);
+    }
+
+
+    float lerpAlpha(float duration)
+    {
+        float lerp  = Mathf.PingPong(Time.time, duration) / duration;
+
+        return Mathf.Lerp(0.0f, 1.0f, lerp);
     }
 }

@@ -87,7 +87,6 @@ GameObject:
   - 20: {fileID: 2079902}
   - 92: {fileID: 9257300}
   - 124: {fileID: 12461366}
-  - 81: {fileID: 8178608}
   - 114: {fileID: 11402708}
   m_Layer: 0
   m_Name: Camera_liv3
@@ -1223,13 +1222,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 1}
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
---- !u!81 &8178608
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102468}
-  m_Enabled: 1
 --- !u!92 &9257300
 Behaviour:
   m_ObjectHideFlags: 1
