@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 
     private bool double_jump = false;
     private bool fireballing = false;
+    private bool luce = true;
 
     public Lava[] lavas;
 
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour {
 	void Update ()
     {
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton1)) && is_3d)
-        { 
+        {
             Ray ray = GameManager.Istance.camera3d.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -130,5 +131,17 @@ public class GameManager : MonoBehaviour {
         double_jump = !double_jump;
 
         character_2d.GetComponent<Keys>().double_jump_enabled = double_jump;
+    }
+
+    public void set_luce()
+    {
+        luce = !luce;
+
+        SpriteRenderer[] sprites = scene2d.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer sprite in sprites)
+        {
+            Texture old_texture = sprite.material.mainTexture;
+            sprite.material.shader = luce ? Shader.Find("Sprites/Default") : Shader.Find("Sprites/Diffuse");
+        }
     }
 }
