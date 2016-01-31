@@ -88,12 +88,12 @@ NavMeshSettings:
 --- !u!1 &8309455 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 115646, guid: d10cd84eee2981244bfce01efb115694, type: 2}
-  m_PrefabInternal: {fileID: 1374434162}
+  m_PrefabInternal: {fileID: 1125672820}
 --- !u!20 &173175817 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2073062, guid: d10cd84eee2981244bfce01efb115694,
     type: 2}
-  m_PrefabInternal: {fileID: 1374434162}
+  m_PrefabInternal: {fileID: 1125672820}
 --- !u!1001 &209534306
 Prefab:
   m_ObjectHideFlags: 0
@@ -294,22 +294,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 149444, guid: 462ec626241a70d4d94f205c12f59aba, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 462ec626241a70d4d94f205c12f59aba, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &711012723 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 158788, guid: d10cd84eee2981244bfce01efb115694, type: 2}
-  m_PrefabInternal: {fileID: 1374434162}
+  m_PrefabInternal: {fileID: 1125672820}
 --- !u!1 &1088007263 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 115906, guid: b6dfd35ef14c83c43bd1a051d2606eca, type: 2}
   m_PrefabInternal: {fileID: 398682120}
---- !u!1 &1335047707 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 105966, guid: b6dfd35ef14c83c43bd1a051d2606eca, type: 2}
-  m_PrefabInternal: {fileID: 398682120}
---- !u!1001 &1374434162
+--- !u!1001 &1125672820
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -346,11 +346,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453858, guid: d10cd84eee2981244bfce01efb115694, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d10cd84eee2981244bfce01efb115694, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1335047707 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 105966, guid: b6dfd35ef14c83c43bd1a051d2606eca, type: 2}
+  m_PrefabInternal: {fileID: 398682120}
 --- !u!1001 &1631404783
 Prefab:
   m_ObjectHideFlags: 0
