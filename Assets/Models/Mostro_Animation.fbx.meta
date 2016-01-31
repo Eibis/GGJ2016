@@ -1,0 +1,625 @@
+fileFormatVersion: 2
+guid: 25271770650dd0643b7b6c440cd7e882
+timeCreated: 1454188096
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: braccioDX_geo
+    100002: braccioSX_geo
+    100004: coda_geo
+    100006: cornutone_grp
+    100008: corpo_geo
+    100010: gambaDX_geo
+    100012: gambaSX_geo
+    100014: geometria
+    100016: joint10
+    100018: joint11
+    100020: joint12
+    100022: joint13
+    100024: joint17
+    100026: joint18
+    100028: joint19
+    100030: joint20
+    100032: joint21
+    100034: joint22
+    100036: joint23
+    100038: joint24
+    100040: joint25
+    100042: joint26
+    100044: joint27
+    100046: joint28
+    100048: joint29
+    100050: joint30
+    100052: joint31
+    100054: joint6
+    100056: joint7
+    100058: joint8
+    100060: joint9
+    100062: //RootNode
+    100064: scheletro
+    400000: braccioDX_geo
+    400002: braccioSX_geo
+    400004: coda_geo
+    400006: cornutone_grp
+    400008: corpo_geo
+    400010: gambaDX_geo
+    400012: gambaSX_geo
+    400014: geometria
+    400016: joint10
+    400018: joint11
+    400020: joint12
+    400022: joint13
+    400024: joint17
+    400026: joint18
+    400028: joint19
+    400030: joint20
+    400032: joint21
+    400034: joint22
+    400036: joint23
+    400038: joint24
+    400040: joint25
+    400042: joint26
+    400044: joint27
+    400046: joint28
+    400048: joint29
+    400050: joint30
+    400052: joint31
+    400054: joint6
+    400056: joint7
+    400058: joint8
+    400060: joint9
+    400062: //RootNode
+    400064: scheletro
+    4300000: corpo_geo
+    4300002: gambaSX_geo
+    4300004: braccioSX_geo
+    4300006: coda_geo
+    4300008: braccioDX_geo
+    4300010: gambaDX_geo
+    7400000: Idle
+    7400002: Walk
+    7400004: Jump
+    7400006: Tail_attack
+    7400008: Fire_attack
+    9500000: //RootNode
+    13700000: braccioDX_geo
+    13700002: braccioSX_geo
+    13700004: coda_geo
+    13700006: corpo_geo
+    13700008: gambaDX_geo
+    13700010: gambaSX_geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cornutone_grp
+        weight: 1
+      - path: cornutone_grp/geometria
+        weight: 1
+      - path: cornutone_grp/geometria/braccioDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/braccioSX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/coda_geo
+        weight: 1
+      - path: cornutone_grp/geometria/corpo_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaSX_geo
+        weight: 1
+      - path: cornutone_grp/scheletro
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30/joint31
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 141
+      lastFrame: 169
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cornutone_grp
+        weight: 1
+      - path: cornutone_grp/geometria
+        weight: 1
+      - path: cornutone_grp/geometria/braccioDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/braccioSX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/coda_geo
+        weight: 1
+      - path: cornutone_grp/geometria/corpo_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaSX_geo
+        weight: 1
+      - path: cornutone_grp/scheletro
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30/joint31
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 170
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cornutone_grp
+        weight: 1
+      - path: cornutone_grp/geometria
+        weight: 1
+      - path: cornutone_grp/geometria/braccioDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/braccioSX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/coda_geo
+        weight: 1
+      - path: cornutone_grp/geometria/corpo_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaSX_geo
+        weight: 1
+      - path: cornutone_grp/scheletro
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30/joint31
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Tail_attack
+      takeName: Take 001
+      firstFrame: 191
+      lastFrame: 215
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cornutone_grp
+        weight: 1
+      - path: cornutone_grp/geometria
+        weight: 1
+      - path: cornutone_grp/geometria/braccioDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/braccioSX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/coda_geo
+        weight: 1
+      - path: cornutone_grp/geometria/corpo_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaSX_geo
+        weight: 1
+      - path: cornutone_grp/scheletro
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30/joint31
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Fire_attack
+      takeName: Take 001
+      firstFrame: 216
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cornutone_grp
+        weight: 1
+      - path: cornutone_grp/geometria
+        weight: 1
+      - path: cornutone_grp/geometria/braccioDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/braccioSX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/coda_geo
+        weight: 1
+      - path: cornutone_grp/geometria/corpo_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaDX_geo
+        weight: 1
+      - path: cornutone_grp/geometria/gambaSX_geo
+        weight: 1
+      - path: cornutone_grp/scheletro
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: cornutone_grp/scheletro/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23
+        weight: 1
+      - path: cornutone_grp/scheletro/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30
+        weight: 1
+      - path: cornutone_grp/scheletro/joint29/joint30/joint31
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
