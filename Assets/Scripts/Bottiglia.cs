@@ -21,7 +21,7 @@ public class Bottiglia : Pickable
     public new void aggiungi()
     {
         base.aggiungi();
-        GameManager.Istance.set_lava();
+        GameManager.Istance.reset_lava();
     }
 
     public new void rimuovi()

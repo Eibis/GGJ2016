@@ -13,6 +13,12 @@ public class SoundManager : MonoBehaviour
     public AudioClip sfx_presa_oggetto_corretta;
     public AudioClip sfx_salto;
 
+    public AudioClip into_demoniaco;
+    public AudioClip loop_demoniaco;
+    public AudioClip intro_ghiaccio;
+    public AudioClip loop_ghiaccio;
+    public AudioClip loop_stanza;
+
     public AudioSource source;
 
     private static SoundManager _this;
