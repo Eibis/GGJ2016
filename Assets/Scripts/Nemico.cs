@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Nemico : MonoBehaviour {
+public class Nemico : MonoBehaviour
+{
 
     int lateral_speed = 5;
     Vector3 wrld;
@@ -55,12 +56,12 @@ public class Nemico : MonoBehaviour {
         {
             Die();
         }
-        
+
     }
 
     public void Die()
     {
-
+        Destroy(gameObject);
     }
 
 
