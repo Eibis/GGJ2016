@@ -138,13 +138,13 @@ public class Keys : MonoBehaviour {
             player_animator.SetBool("tail_attack", false);
 
             if (Input.GetKeyDown(KeyCode.LeftControl))
-            {
+            {/*
                 if (!destra)
                     player_animator.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
                 else
                     player_animator.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
 
-                destra = !destra;
+                destra = !destra;*/
 
                 player_animator.SetBool("tail_attack", true);
 

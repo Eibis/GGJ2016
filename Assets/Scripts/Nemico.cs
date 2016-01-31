@@ -10,25 +10,36 @@ public class Nemico : MonoBehaviour
     bool isGrounded;
     bool verso_destra;
     float appena_cambiato = 0;
+    Animator animator;
+
     void Start()
     {
         verso_destra = true;
+        animator = GetComponentInChildren<Animator>();
     }
 
 
     // Update is called once per frame
     public void Update()
     {
+        animator.SetBool("attacking", false);
+
         float x;
         if (!verso_destra)
             x = 1;
         else
             x = -1;
+
         isGrounded = Physics2D.Linecast(this.transform.position, transform.position - new Vector3(x, 1.5f, 0), 1 << LayerMask.NameToLayer("Ground"));
 
         if (!isGrounded)
         {
             verso_destra = !verso_destra;
+            
+            if (verso_destra)
+                animator.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            else
+                animator.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
         }
 
 
@@ -50,6 +61,11 @@ public class Nemico : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            animator.SetBool("attacking", true);
+        }
+
         if (collision.gameObject.tag == "Muro" && !isGrounded)
         {
             if (appena_cambiato > 1f)
@@ -77,6 +93,14 @@ public class Nemico : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Arma")
+        {
+            Die();
+        }
     }
 
     public void Die()
