@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class Keys : MonoBehaviour {
 	
     float timer = 20f;
@@ -18,6 +18,9 @@ public class Keys : MonoBehaviour {
     public bool double_jump_enabled = false;
     public bool destra = false;
     public bool freezed = false;
+    float timer_shooting = 0;
+
+    public List<GameObject> pallottole;
 
     public void Update()
     {
@@ -86,9 +89,16 @@ public class Keys : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
 
-            Instantiate(Resources.Load("PallaDiFuoco"), new Vector3(transform.position.x, transform.position.y+5, transform.position.z),Quaternion.identity);
+            if (timer_shooting > 0.5f)
+            {
+                pallottole.Add((GameObject)Instantiate(Resources.Load("PallaDiFuoco"), new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity));
+                timer_shooting = 0;
+
+            }
 
         }
+        timer_shooting += Time.deltaTime;
+
     }
 
     public void start_timer()
@@ -110,8 +120,34 @@ public class Keys : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Enemy")
         {
+            foreach (GameObject bullet in pallottole)
+            {
+                Destroy(bullet);
+            }
+
+            pallottole.Clear();
+
             GameManager.Istance.LoadCheckpoint();
         }
-    }
 
+        if (coll.gameObject.tag == "Arma")
+        {
+            if (timer_shooting > 0.5f)
+            {
+                foreach (GameObject bullet in pallottole)
+                {
+                    Destroy(bullet);
+                }
+
+                pallottole.Clear();
+
+                GameManager.Istance.LoadCheckpoint();
+
+                timer_shooting = 0;
+            }
+
+
+
+        }
+    }
 }
