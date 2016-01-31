@@ -18,7 +18,6 @@ public class PallaDiFuoco : MonoBehaviour
     }
     void Start()
     {
-        Debug.Log("start f");
         rb = GetComponent<Rigidbody2D>();
 
         if (direction_d)

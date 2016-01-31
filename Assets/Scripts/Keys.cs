@@ -86,7 +86,7 @@ public class Keys : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.JoystickButton5))
         {
 
             if (timer_shooting > 0.5f)
