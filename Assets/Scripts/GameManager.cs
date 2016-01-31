@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
     private bool lava_to_active = true;
 
     private bool double_jump = false;
-    private bool fireballing = false;
     private bool luce = true;
 
 	private bool builder_up = false;
@@ -159,10 +158,13 @@ public class GameManager : MonoBehaviour {
     public void set_accendino()
     {
         accendino = true;
+        character_2d.GetComponent<Keys>().fireballing = true;
     }
     public void reset_accendino()
     {
         accendino = false;
+        character_2d.GetComponent<Keys>().fireballing = false;
+
     }
 
     public bool get_accendino()
