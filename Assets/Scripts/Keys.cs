@@ -18,6 +18,14 @@ public class Keys : MonoBehaviour {
     public bool double_jump_enabled = false;
     public bool destra = false;
     public bool freezed = false;
+    public bool fireballing = false;
+    
+    public Animator player_animator;
+
+    public void Start()
+    {
+        player_animator = GetComponentInChildren<Animator>();
+    }
 
     public void Update()
     {
@@ -40,12 +48,14 @@ public class Keys : MonoBehaviour {
             jumping = false;
             falling = false;
             double_jumping = false;
-
+            player_animator.SetBool("jump", false);
         }
-        if(jumping && !double_jumping && !(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
+
+        if (jumping && !double_jumping && !(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
             jump_released = true;
         }
+
         if(double_jump_enabled && jumping && jump_released && !double_jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
             falling = false;
@@ -55,11 +65,14 @@ public class Keys : MonoBehaviour {
         }
         if(!jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && !falling)
         {
+            if(!jumping && !falling)
+                player_animator.SetBool("jump", true);
+
             jump_starting_y = transform.position.y;
             jumping = true;
             jump_released = false;
         }
-        if(jumping && !falling && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && ((transform.position.y - jump_starting_y) < jumping_height || (double_jumping && (transform.position.y - double_jump_starting_y) < jumping_height)))
+        if (jumping && !falling && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && ((transform.position.y - jump_starting_y) < jumping_height || (double_jumping && (transform.position.y - double_jump_starting_y) < jumping_height)))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump_speed);
             jump_released = false;
@@ -67,14 +80,29 @@ public class Keys : MonoBehaviour {
 
         if(!freezed)
         {
+            if(Input.GetAxis("Horizontal") != 0)
+                player_animator.SetFloat("movement", 1);
+            else
+                player_animator.SetFloat("movement", 0);
+
             if ((Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)))
             {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
+
+                if(!destra)
+                    player_animator.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+
                 destra = true;
+
+            
             }
             else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A)) && !(Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D)))
             {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(-lateral_speed, this.GetComponent<Rigidbody2D>().velocity.y);
+
+                if(destra)
+                    player_animator.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+
                 destra = false;
             }
             else if (Mathf.Abs(this.GetComponent<Rigidbody2D>().velocity.x) > 0)
@@ -82,12 +110,37 @@ public class Keys : MonoBehaviour {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x * 0.5f, this.GetComponent<Rigidbody2D>().velocity.y);
             }
         }
+        else
+            player_animator.SetFloat("movement", 0);
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (fireballing)
         {
+            player_animator.SetBool("fire_attack", false);
 
-            Instantiate(Resources.Load("PallaDiFuoco"), new Vector3(transform.position.x, transform.position.y+5, transform.position.z),Quaternion.identity);
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
 
+                Instantiate(Resources.Load("PallaDiFuoco"), new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity);
+                player_animator.SetBool("fire_attack", true);
+
+            }
+        }
+        else
+        {
+            player_animator.SetBool("tail_attack", false);
+
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                if (!destra)
+                    player_animator.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+                else
+                    player_animator.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+
+                destra = !destra;
+
+                player_animator.SetBool("tail_attack", true);
+
+            }
         }
     }
 
