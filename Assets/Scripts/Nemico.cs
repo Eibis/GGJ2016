@@ -9,7 +9,7 @@ public class Nemico : MonoBehaviour
     float half_sz;
     bool isGrounded;
     bool verso_destra;
-
+    float appena_cambiato = 0;
     void Start()
     {
         verso_destra = true;
@@ -44,17 +44,37 @@ public class Nemico : MonoBehaviour
 
         }
 
+        appena_cambiato += Time.deltaTime;
+
+
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Muro")
+        if (collision.gameObject.tag == "Muro" && !isGrounded)
         {
-            verso_destra = !verso_destra;
+            if (appena_cambiato > 1f)
+            {
+                appena_cambiato = 0;
+            }
+            else
+            {
+                if (verso_destra)
+                {
+                    verso_destra = !verso_destra;
+
+                }
+                else
+                {
+                    verso_destra = !verso_destra;
+                }
+            }
         }
 
         if (collision.gameObject.tag == "Arma")
         {
             Die();
+
+            Destroy(collision.gameObject);
         }
 
     }
