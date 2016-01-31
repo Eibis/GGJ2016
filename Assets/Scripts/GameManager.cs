@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	private bool light = false;
 
     private bool accendino = false;
+    private bool coniglio = false;
 
     public Lava[] lavas;
 
@@ -157,6 +158,21 @@ public class GameManager : MonoBehaviour {
 	{
 		immortality = false;
 	}
+
+    public void set_coniglio()
+    {
+        coniglio = !coniglio;
+        if (coniglio)
+        {
+            set_double_jump();
+        }
+    }
+
+
+    public bool get_coniglio()
+    {
+        return accendino;
+    }
 
     public void set_accendino()
     {
