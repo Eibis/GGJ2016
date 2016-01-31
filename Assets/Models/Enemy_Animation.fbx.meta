@@ -1,0 +1,340 @@
+fileFormatVersion: 2
+guid: 5dd1b41b4db2e1844bda8fcd430273db
+timeCreated: 1454197365
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: braccioDx
+    100002: braccioSx
+    100004: coda
+    100006: corpo
+    100008: //RootNode
+    100010: gambaDx
+    100012: gambaSx
+    100014: geometria
+    100016: ikHandle4
+    100018: ikHandle5
+    100020: joint1
+    100022: joint10
+    100024: joint11
+    100026: joint12
+    100028: joint13
+    100030: joint14
+    100032: joint15
+    100034: joint16
+    100036: joint18
+    100038: joint19
+    100040: joint2
+    100042: joint20
+    100044: joint21
+    100046: joint22
+    100048: joint23
+    100050: joint24
+    100052: joint25
+    100054: joint26
+    100056: joint27
+    100058: joint28
+    100060: joint3
+    100062: joint4
+    100064: scheletro
+    400000: braccioDx
+    400002: braccioSx
+    400004: coda
+    400006: corpo
+    400008: //RootNode
+    400010: gambaDx
+    400012: gambaSx
+    400014: geometria
+    400016: ikHandle4
+    400018: ikHandle5
+    400020: joint1
+    400022: joint10
+    400024: joint11
+    400026: joint12
+    400028: joint13
+    400030: joint14
+    400032: joint15
+    400034: joint16
+    400036: joint18
+    400038: joint19
+    400040: joint2
+    400042: joint20
+    400044: joint21
+    400046: joint22
+    400048: joint23
+    400050: joint24
+    400052: joint25
+    400054: joint26
+    400056: joint27
+    400058: joint28
+    400060: joint3
+    400062: joint4
+    400064: scheletro
+    4300000: gambaSx
+    4300002: gambaDx
+    4300004: corpo
+    4300006: coda
+    4300008: braccioDx
+    4300010: braccioSx
+    7400000: Walk
+    7400002: Attack
+    9500000: //RootNode
+    13700000: braccioDx
+    13700002: braccioSx
+    13700004: coda
+    13700006: corpo
+    13700008: gambaDx
+    13700010: gambaSx
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: geometria
+        weight: 1
+      - path: geometria/braccioDx
+        weight: 1
+      - path: geometria/braccioSx
+        weight: 1
+      - path: geometria/coda
+        weight: 1
+      - path: geometria/corpo
+        weight: 1
+      - path: geometria/gambaDx
+        weight: 1
+      - path: geometria/gambaSx
+        weight: 1
+      - path: scheletro
+        weight: 1
+      - path: scheletro/ikHandle4
+        weight: 1
+      - path: scheletro/ikHandle5
+        weight: 1
+      - path: scheletro/joint1
+        weight: 1
+      - path: scheletro/joint1/joint2
+        weight: 1
+      - path: scheletro/joint1/joint2/joint3
+        weight: 1
+      - path: scheletro/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: scheletro/joint1/joint16
+        weight: 1
+      - path: scheletro/joint1/joint16/joint18
+        weight: 1
+      - path: scheletro/joint1/joint16/joint18/joint19
+        weight: 1
+      - path: scheletro/joint1/joint16/joint18/joint19/joint20
+        weight: 1
+      - path: scheletro/joint1/joint21
+        weight: 1
+      - path: scheletro/joint1/joint21/joint22
+        weight: 1
+      - path: scheletro/joint1/joint21/joint22/joint23
+        weight: 1
+      - path: scheletro/joint1/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: scheletro/joint1/joint25
+        weight: 1
+      - path: scheletro/joint1/joint25/joint26
+        weight: 1
+      - path: scheletro/joint1/joint25/joint26/joint27
+        weight: 1
+      - path: scheletro/joint1/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: scheletro/joint10
+        weight: 1
+      - path: scheletro/joint10/joint11
+        weight: 1
+      - path: scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: scheletro/joint13
+        weight: 1
+      - path: scheletro/joint13/joint14
+        weight: 1
+      - path: scheletro/joint13/joint14/joint15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 26
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: geometria
+        weight: 1
+      - path: geometria/braccioDx
+        weight: 1
+      - path: geometria/braccioSx
+        weight: 1
+      - path: geometria/coda
+        weight: 1
+      - path: geometria/corpo
+        weight: 1
+      - path: geometria/gambaDx
+        weight: 1
+      - path: geometria/gambaSx
+        weight: 1
+      - path: scheletro
+        weight: 1
+      - path: scheletro/ikHandle4
+        weight: 1
+      - path: scheletro/ikHandle5
+        weight: 1
+      - path: scheletro/joint1
+        weight: 1
+      - path: scheletro/joint1/joint2
+        weight: 1
+      - path: scheletro/joint1/joint2/joint3
+        weight: 1
+      - path: scheletro/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: scheletro/joint1/joint16
+        weight: 1
+      - path: scheletro/joint1/joint16/joint18
+        weight: 1
+      - path: scheletro/joint1/joint16/joint18/joint19
+        weight: 1
+      - path: scheletro/joint1/joint16/joint18/joint19/joint20
+        weight: 1
+      - path: scheletro/joint1/joint21
+        weight: 1
+      - path: scheletro/joint1/joint21/joint22
+        weight: 1
+      - path: scheletro/joint1/joint21/joint22/joint23
+        weight: 1
+      - path: scheletro/joint1/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: scheletro/joint1/joint25
+        weight: 1
+      - path: scheletro/joint1/joint25/joint26
+        weight: 1
+      - path: scheletro/joint1/joint25/joint26/joint27
+        weight: 1
+      - path: scheletro/joint1/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: scheletro/joint10
+        weight: 1
+      - path: scheletro/joint10/joint11
+        weight: 1
+      - path: scheletro/joint10/joint11/joint12
+        weight: 1
+      - path: scheletro/joint13
+        weight: 1
+      - path: scheletro/joint13/joint14
+        weight: 1
+      - path: scheletro/joint13/joint14/joint15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
