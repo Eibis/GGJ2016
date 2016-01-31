@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
 
 	private bool builder_up = false;
 	private bool immortality = false;
+	private bool light = false;
 
     private bool accendino = false;
 
@@ -160,10 +161,15 @@ public class GameManager : MonoBehaviour {
     public void set_accendino()
     {
         accendino = true;
+
+        character_2d.GetComponent<Keys>().fireballing = true;
     }
     public void reset_accendino()
     {
         accendino = false;
+
+        character_2d.GetComponent<Keys>().fireballing = false;
+
     }
 
     public bool get_accendino()
@@ -184,19 +190,27 @@ public class GameManager : MonoBehaviour {
 
     public void set_luce()
     {
-        SpriteRenderer[] sprites = scene2d.GetComponentsInChildren<SpriteRenderer>();
-        foreach (SpriteRenderer sprite in sprites)
-        {
-            sprite.material.shader = Shader.Find("Sprites/Default");
-        }
+		light = true;
+
+		scene2d.transform.FindChild("PointLights").gameObject.SetActive(false);
+		scene2d.transform.FindChild("Directional light").gameObject.SetActive(true);
+
     }
 
 	public void reset_luce()
 	{
+		light = false;
 		SpriteRenderer[] sprites = scene2d.GetComponentsInChildren<SpriteRenderer>();
 		foreach (SpriteRenderer sprite in sprites)
 		{
 			sprite.material.shader = Shader.Find ("Sprites/Diffuse");
 		}
+		scene2d.transform.FindChild("PointLights").gameObject.SetActive(true);
+		scene2d.transform.FindChild("Directional light").gameObject.SetActive(false);
+
+	}
+
+	public bool get_luce() {
+		return this.light;
 	}
 }

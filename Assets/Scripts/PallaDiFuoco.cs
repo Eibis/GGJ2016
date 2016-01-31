@@ -18,12 +18,26 @@ public class PallaDiFuoco : MonoBehaviour
     }
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
 
+        Transform tmp_transform = GetComponentInChildren<Transform>();
+
+        tmp_transform.position = transform.position;
+
+        Rigidbody2D tmp = GetComponentInChildren<Rigidbody2D>();
+
         if (direction_d)
+        {
             rb.AddForce(transform.right * 40, ForceMode2D.Impulse);
+            tmp.AddForce(transform.right * 40, ForceMode2D.Impulse);
+        }
         else
+        {
             rb.AddForce(transform.right * -40, ForceMode2D.Impulse);
+            tmp.AddForce(transform.right * -40, ForceMode2D.Impulse);
+
+        }
 
     }
     void Update()
@@ -35,10 +49,14 @@ public class PallaDiFuoco : MonoBehaviour
         }
         tempo_vita += Time.deltaTime;
 
+        Transform tmp = gameObject.GetComponentInChildren<Transform>();
+
+        Debug.Log(tmp.position.z);
+
     }
 
     void die()
     {
-        Destroy(gameObject);
+       // Destroy(gameObject);
     }
 }

@@ -11,7 +11,8 @@ public class Masso : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameManager.Istance.get_Builder() == true) {
+		if (GameManager.Istance.get_Builder() == true)
+		{
 			this.transform.position = starting_pos + new Vector3 (0, 20, 0);
 		} else
 			this.transform.position = starting_pos;
