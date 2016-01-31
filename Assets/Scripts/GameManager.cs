@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	private bool light = false;
 
     private bool accendino = false;
+    private bool coniglio = false;
 
     public Lava[] lavas;
 
@@ -158,6 +159,21 @@ public class GameManager : MonoBehaviour {
 		immortality = false;
 	}
 
+    public void set_coniglio()
+    {
+        coniglio = !coniglio;
+        if (coniglio)
+        {
+            set_double_jump();
+        }
+    }
+
+
+    public bool get_coniglio()
+    {
+        return accendino;
+    }
+
     public void set_accendino()
     {
         accendino = true;
@@ -205,8 +221,12 @@ public class GameManager : MonoBehaviour {
 		{
 			sprite.material.shader = Shader.Find ("Sprites/Diffuse");
 		}
-		scene2d.transform.FindChild("PointLights").gameObject.SetActive(true);
-		scene2d.transform.FindChild("Directional light").gameObject.SetActive(false);
+
+        if(scene2d.transform.FindChild("PointLights") != null)
+		    scene2d.transform.FindChild("PointLights").gameObject.SetActive(true);
+
+        if (scene2d.transform.FindChild("Directional light") != null)
+            scene2d.transform.FindChild("Directional light").gameObject.SetActive(false);
 
 	}
 
