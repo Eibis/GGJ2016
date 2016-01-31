@@ -8,6 +8,7 @@ TagManager:
   - Pickable
   - Enemy
   - Arma
+  - Muro
   layers:
   - Default
   - TransparentFX
