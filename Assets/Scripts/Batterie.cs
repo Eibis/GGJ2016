@@ -3,13 +3,32 @@ using System.Collections;
 
 public class Batterie : Pickable {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public new void hit()
+    {
+        if (moved)
+        {
+            rimuovi();
+        }
+        else
+        {
+            aggiungi();
+        }
+
+        moved = !moved;
+    }
+
+
+    public new void aggiungi()
+    {
+        base.aggiungi();
+        GameManager.Istance.set_accendino();
+
+        Debug.Log("eccolo");
+    }
+
+    public new void rimuovi()
+    {
+        base.rimuovi();
+        GameManager.Istance.reset_accendino();
+    }
 }
