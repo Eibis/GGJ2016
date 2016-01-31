@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481714}
   - 68: {fileID: 6849450}
+  - 114: {fileID: 11470666}
   m_Layer: 9
   m_Name: Spikes
   m_TagString: Enemy
@@ -220,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &182464
 GameObject:
   m_ObjectHideFlags: 1
@@ -625,22 +626,17 @@ PolygonCollider2D:
       - {x: -42.75277, y: -9.8788395}
       - {x: -42.906883, y: -8.776371}
       - {x: -43.151367, y: -8.385331}
-      - {x: -44.155914, y: -7.510586}
-      - {x: -44.3442, y: -5.523514}
-      - {x: -44.974464, y: -4.9198675}
-      - {x: -48.630524, y: -4.6852436}
-      - {x: -50.116825, y: -5.296611}
+      - {x: -44.20722, y: -7.459279}
+      - {x: -44.204865, y: -4.868561}
+      - {x: -50.116825, y: -4.8861575}
       - {x: -50.080566, y: -8.74488}
-      - {x: -53.169853, y: -8.714083}
-      - {x: -53.927025, y: -8.507101}
+      - {x: -54.080944, y: -8.763635}
       - {x: -54.08344, y: -7.09936}
-      - {x: -58.65461, y: -7.1128545}
-      - {x: -59.094185, y: -7.50121}
+      - {x: -59.094185, y: -7.090757}
       - {x: -59.099552, y: -8.801071}
       - {x: -63.618526, y: -8.814763}
-      - {x: -64.51468, y: -8.660833}
-      - {x: -64.72516, y: -7.9299736}
-      - {x: -65.90364, y: -7.320489}
+      - {x: -64.88267, y: -8.713404}
+      - {x: -64.882866, y: -7.3517036}
       - {x: -69.752014, y: -7.2908916}
       - {x: -69.779, y: -8.925131}
       - {x: -78.24699, y: -8.95481}
@@ -830,7 +826,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 1.9042511, y: 6.8795595}
   serializedVersion: 2
@@ -906,19 +902,14 @@ EdgeCollider2D:
   m_Points:
   - {x: 18.920967, y: -10.120747}
   - {x: 21.368477, y: -10.409601}
-  - {x: 21.263802, y: -9.10879}
-  - {x: 22.003113, y: -8.475906}
-  - {x: 25.055122, y: -8.731279}
-  - {x: 25.213928, y: -7.751}
-  - {x: 27.401627, y: -8.330377}
-  - {x: 28.411705, y: -8.993249}
-  - {x: 29.720688, y: -9.191254}
-  - {x: 30.479996, y: -7.034185}
-  - {x: 31.132767, y: -8.807764}
-  - {x: 33.96759, y: -8.754551}
+  - {x: 20.76301, y: -8.997501}
+  - {x: 21.724892, y: -7.9751077}
+  - {x: 24.220457, y: -7.284528}
+  - {x: 26.660685, y: -7.194556}
+  - {x: 28.125017, y: -7.3287787}
+  - {x: 30.925146, y: -7.089829}
+  - {x: 33.800667, y: -8.253753}
   - {x: 35.490578, y: -7.741419}
-  - {x: 36.5048, y: -10.233566}
-  - {x: 37.24375, y: -10.39003}
   - {x: 37.64772, y: -8.037552}
   - {x: 40.35103, y: -8.856931}
   - {x: 40.95127, y: -10.262529}
@@ -1056,7 +1047,7 @@ MonoBehaviour:
   percent_out: 0.3
   ForeGround: {fileID: 155320}
   Camera: {fileID: 197820}
-  x_offset: 0
+  x_offset: -2
   y_offset: -50
   parallax_y: 1
 --- !u!114 &11434856
@@ -1096,6 +1087,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Demon: {fileID: 170474}
+--- !u!114 &11470666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f2d74c3ee66bd41bc3e243aba64e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11473974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1121,6 +1123,7 @@ MonoBehaviour:
   double_jump_enabled: 0
   destra: 0
   freezed: 0
+  pallottole: []
 --- !u!114 &11496992
 MonoBehaviour:
   m_ObjectHideFlags: 1
