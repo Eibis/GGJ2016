@@ -1,15 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tazza : MonoBehaviour {
+public class Tazza : Pickable {
 
-	// Use this for initialization
-	void Start () {
-	
+	public new void hit()
+	{
+		if (moved)
+		{
+			rimuovi();
+		}
+		else
+		{
+			aggiungi();
+		}
+
+		moved = !moved;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+
+	public new void aggiungi()
+	{
+		base.aggiungi();
+	}
+
+	public new void rimuovi()
+	{
+		base.rimuovi();
 	}
 }

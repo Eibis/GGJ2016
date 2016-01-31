@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Lepre : Pickable {
+public class Coniglio : Pickable {
 
     public new void hit()
     {
@@ -21,14 +21,12 @@ public class Lepre : Pickable {
     public new void aggiungi()
     {
         base.aggiungi();
-        GameManager.Istance.set_accendino();
-
-        Debug.Log("eccolo");
+		GameManager.Istance.set_double_jump ();
     }
 
     public new void rimuovi()
     {
         base.rimuovi();
-        GameManager.Istance.reset_accendino();
+		GameManager.Istance.reset_double_jump ();
     }
 }

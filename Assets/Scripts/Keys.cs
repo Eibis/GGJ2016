@@ -15,15 +15,12 @@ public class Keys : MonoBehaviour {
     float double_jump_starting_y;
     bool falling = false;
     bool jump_released = true;
-    public bool double_jump_enabled = false;
     public bool destra = false;
     public bool freezed = false;
-    public bool fireballing = false;
 
     public Animator player_animator;
 
     float timer_shooting = 0;
-
     public List<GameObject> pallottole;
 
     public void Start()
@@ -59,7 +56,7 @@ public class Keys : MonoBehaviour {
         {
             jump_released = true;
         }
-        if(double_jump_enabled && jumping && jump_released && !double_jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
+		if(GameManager.Istance.get_double_jump() && jumping && jump_released && !double_jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
             falling = false;
             double_jumping = true;
@@ -116,7 +113,7 @@ public class Keys : MonoBehaviour {
             player_animator.SetFloat("movement", 0);
 		}
 
-        if (fireballing)
+		if (GameManager.Istance.get_accendino())
         {
             player_animator.SetBool("fire_attack", false);
 

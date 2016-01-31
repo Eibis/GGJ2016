@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
     private bool lava_to_active = true;
 
     private bool double_jump = false;
-    private bool fireballing = false;
 
 	private bool builder_up = false;
 	private bool immortality = false;
@@ -177,21 +176,18 @@ public class GameManager : MonoBehaviour {
     public void set_accendino()
     {
         accendino = true;
-
-        character_2d.GetComponent<Keys>().fireballing = true;
     }
+
     public void reset_accendino()
     {
         accendino = false;
-
-        character_2d.GetComponent<Keys>().fireballing = false;
-
     }
 
     public bool get_accendino()
     {
         return accendino;
     }
+
 	public bool get_Immortality()
 	{
 		return immortality;
@@ -199,10 +195,18 @@ public class GameManager : MonoBehaviour {
 
     public void set_double_jump()
     {
-        double_jump = !double_jump;
-
-        character_2d.GetComponent<Keys>().double_jump_enabled = double_jump;
+        double_jump = true;
     }
+
+	public void reset_double_jump()
+	{
+		double_jump = false;
+	}
+
+	public bool get_double_jump()
+	{
+		return double_jump;
+	}
 
     public void set_luce()
     {

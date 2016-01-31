@@ -2079,10 +2079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda3ed301dcc8e849bf4a52a34be9435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  double_jump_enabled: 0
   destra: 0
   freezed: 0
-  fireballing: 0
   player_animator: {fileID: 0}
   pallottole: []
 --- !u!114 &11470666
