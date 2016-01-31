@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 2263d08bc08552a418bacf8de5891796
+timeCreated: 1454232711
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Toy_Block10
+    100004: Toy_Block11
+    100006: Toy_Block12
+    100008: Toy_Block13
+    100010: Toy_Block14
+    100012: Toy_Block15
+    100014: Toy_Block16
+    100016: Toy_Block17
+    100018: Toy_Block18
+    100020: Toy_Block19
+    100022: Toy_Block20
+    100024: Toy_Block21
+    100026: Toy_Block22
+    100028: Toy_Block23
+    100030: Toy_Block24
+    100032: Toy_Block25
+    100034: Toy_Block26
+    100036: Toy_Block27
+    100038: Toy_Block28
+    100040: Toy_Block9
+    400000: //RootNode
+    400002: Toy_Block10
+    400004: Toy_Block11
+    400006: Toy_Block12
+    400008: Toy_Block13
+    400010: Toy_Block14
+    400012: Toy_Block15
+    400014: Toy_Block16
+    400016: Toy_Block17
+    400018: Toy_Block18
+    400020: Toy_Block19
+    400022: Toy_Block20
+    400024: Toy_Block21
+    400026: Toy_Block22
+    400028: Toy_Block23
+    400030: Toy_Block24
+    400032: Toy_Block25
+    400034: Toy_Block26
+    400036: Toy_Block27
+    400038: Toy_Block28
+    400040: Toy_Block9
+    2300000: Toy_Block10
+    2300002: Toy_Block11
+    2300004: Toy_Block12
+    2300006: Toy_Block13
+    2300008: Toy_Block14
+    2300010: Toy_Block15
+    2300012: Toy_Block16
+    2300014: Toy_Block17
+    2300016: Toy_Block18
+    2300018: Toy_Block19
+    2300020: Toy_Block20
+    2300022: Toy_Block21
+    2300024: Toy_Block22
+    2300026: Toy_Block23
+    2300028: Toy_Block24
+    2300030: Toy_Block25
+    2300032: Toy_Block26
+    2300034: Toy_Block27
+    2300036: Toy_Block28
+    2300038: Toy_Block9
+    3300000: Toy_Block10
+    3300002: Toy_Block11
+    3300004: Toy_Block12
+    3300006: Toy_Block13
+    3300008: Toy_Block14
+    3300010: Toy_Block15
+    3300012: Toy_Block16
+    3300014: Toy_Block17
+    3300016: Toy_Block18
+    3300018: Toy_Block19
+    3300020: Toy_Block20
+    3300022: Toy_Block21
+    3300024: Toy_Block22
+    3300026: Toy_Block23
+    3300028: Toy_Block24
+    3300030: Toy_Block25
+    3300032: Toy_Block26
+    3300034: Toy_Block27
+    3300036: Toy_Block28
+    3300038: Toy_Block9
+    4300000: Toy_Block9
+    4300002: Toy_Block12
+    4300004: Toy_Block11
+    4300006: Toy_Block10
+    4300008: Toy_Block21
+    4300010: Toy_Block22
+    4300012: Toy_Block23
+    4300014: Toy_Block24
+    4300016: Toy_Block13
+    4300018: Toy_Block14
+    4300020: Toy_Block15
+    4300022: Toy_Block16
+    4300024: Toy_Block17
+    4300026: Toy_Block18
+    4300028: Toy_Block19
+    4300030: Toy_Block20
+    4300032: Toy_Block25
+    4300034: Toy_Block26
+    4300036: Toy_Block27
+    4300038: Toy_Block28
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
