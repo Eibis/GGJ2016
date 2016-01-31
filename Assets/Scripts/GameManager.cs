@@ -221,8 +221,12 @@ public class GameManager : MonoBehaviour {
 		{
 			sprite.material.shader = Shader.Find ("Sprites/Diffuse");
 		}
-		scene2d.transform.FindChild("PointLights").gameObject.SetActive(true);
-		scene2d.transform.FindChild("Directional light").gameObject.SetActive(false);
+
+        if(scene2d.transform.FindChild("PointLights") != null)
+		    scene2d.transform.FindChild("PointLights").gameObject.SetActive(true);
+
+        if (scene2d.transform.FindChild("Directional light") != null)
+            scene2d.transform.FindChild("Directional light").gameObject.SetActive(false);
 
 	}
 
