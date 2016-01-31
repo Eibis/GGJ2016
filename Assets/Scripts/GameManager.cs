@@ -19,9 +19,6 @@ public class GameManager : MonoBehaviour {
 
     public Transform checkpoint;
 
-    private bool lava_active = true;
-    private bool lava_to_active = true;
-
     private bool double_jump = false;
 
 	private bool builder_up = false;
@@ -85,17 +82,6 @@ public class GameManager : MonoBehaviour {
                 scene3d.SetActive(false);
                 scene2d.SetActive(true);
                 crosshair.SetActive(false);
-
-                if (lava_active != lava_to_active)
-                {
-                    Lava [] temp = (Lava[])FindObjectsOfType<Lava>();
-
-                    if (temp != null && temp.Length > 0)
-                        lavas = temp;
-
-                    if (lavas != null)
-                        set_lava_int();
-                }
             }
             else
             {
@@ -115,30 +101,19 @@ public class GameManager : MonoBehaviour {
 
     public void set_lava()
     {
-        lava_to_active = !lava_active;
+		foreach (Lava lava in lavas)
+		{
+			lava.gameObject.SetActive(true);
+		}
     }
 
-    public void set_lava_int()
-    {
-        lava_active = !lava_active;
-
-        lava_to_active = lava_active;
-
-        if (lava_active)
-        {
-            foreach (Lava lava in lavas)
-            {
-                lava.gameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            foreach (Lava lava in lavas)
-            {
-                lava.gameObject.SetActive(false);
-            }
-        }
-    }
+	public void reset_lava()
+	{
+		foreach (Lava lava in lavas)
+		{
+			lava.gameObject.SetActive(false);
+		}
+	}
 
 	public void set_Builder()
 	{

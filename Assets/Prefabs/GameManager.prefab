@@ -149,12 +149,13 @@ MonoBehaviour:
   camera2d: {fileID: 0}
   scene3d: {fileID: 0}
   scene2d: {fileID: 0}
-  is_3d: 0
+  is_3d: 1
   character_2d: {fileID: 0}
   character_3d: {fileID: 0}
   object_picked: []
   checkpoint: {fileID: 0}
-  lavas: []
+  lavas:
+  - {fileID: 0}
   crosshair: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
