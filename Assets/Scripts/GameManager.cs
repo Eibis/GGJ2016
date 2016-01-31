@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
 	private bool builder_up = false;
 	private bool immortality = false;
 
+    private bool accendino = false;
+
     public Lava[] lavas;
 
     // Use this for initialization
@@ -154,6 +156,19 @@ public class GameManager : MonoBehaviour {
 		immortality = false;
 	}
 
+    public void set_accendino()
+    {
+        accendino = true;
+    }
+    public void reset_accendino()
+    {
+        accendino = false;
+    }
+
+    public bool get_accendino()
+    {
+        return accendino;
+    }
 	public bool get_Immortality()
 	{
 		return immortality;
