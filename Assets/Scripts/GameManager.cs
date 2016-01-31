@@ -160,10 +160,15 @@ public class GameManager : MonoBehaviour {
     public void set_accendino()
     {
         accendino = true;
+
+        character_2d.GetComponent<Keys>().fireballing = true;
     }
     public void reset_accendino()
     {
         accendino = false;
+
+        character_2d.GetComponent<Keys>().fireballing = false;
+
     }
 
     public bool get_accendino()
