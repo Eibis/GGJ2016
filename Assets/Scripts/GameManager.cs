@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour {
     private bool double_jump = false;
     private bool fireballing = false;
 
+	private bool builder_up = false;
+	private bool immortality = false;
+
     public Lava[] lavas;
 
     // Use this for initialization
@@ -121,6 +124,36 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
+
+	public void set_Builder()
+	{
+		builder_up = true;
+	}
+
+	public void reset_Builder()
+	{
+		builder_up = false;
+	}
+
+	public bool get_Builder()
+	{
+		return builder_up;
+	}
+
+	public void set_Immortality()
+	{
+		immortality = true;
+	}
+
+	public void reset_Immortality()
+	{
+		immortality = false;
+	}
+
+	public bool get_Immortality()
+	{
+		return immortality;
+	}
 
     public void set_double_jump()
     {
