@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
 
     public Lava[] lavas;
 
+    public GameObject crosshair;
+
     // Use this for initialization
     void Start ()
     {
@@ -44,11 +46,13 @@ public class GameManager : MonoBehaviour {
         {
             scene3d.SetActive(true);
             scene2d.SetActive(false);
+            crosshair.SetActive(true);
         }
         else
         {
             scene3d.SetActive(false);
             scene2d.SetActive(true);
+            crosshair.SetActive(false);
         }
 
         checkpoint = transform;
@@ -81,6 +85,7 @@ public class GameManager : MonoBehaviour {
                 is_3d = false;
                 scene3d.SetActive(false);
                 scene2d.SetActive(true);
+                crosshair.SetActive(false);
 
                 if (lava_active != lava_to_active)
                 {
@@ -98,12 +103,14 @@ public class GameManager : MonoBehaviour {
                 is_3d = true;
                 scene3d.SetActive(true);
                 scene2d.SetActive(false);
+                crosshair.SetActive(true);
             }
         }
     }
 
     public void LoadCheckpoint()
     {
+        SoundManager.PlayMorte();
 		character_2d.transform.position = new Vector3 (checkpoint.position.x,checkpoint.position.y, 40);
     }
 

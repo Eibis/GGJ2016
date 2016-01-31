@@ -69,7 +69,10 @@ public class Keys : MonoBehaviour {
         if(!jumping && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && !falling)
         {
             if (!jumping && !falling)
+            {
                 player_animator.SetBool("jump", true);
+                SoundManager.PlaySalto();
+            }
 
             jump_starting_y = transform.position.y;
             jumping = true;
@@ -84,7 +87,10 @@ public class Keys : MonoBehaviour {
         if(!freezed)
         {
             if (Input.GetAxis("Horizontal") != 0)
+            {
+                SoundManager.PlayPasso(); 
                 player_animator.SetFloat("movement", 1);
+            }
             else
                 player_animator.SetFloat("movement", 0);
 
@@ -127,7 +133,7 @@ public class Keys : MonoBehaviour {
                 {
                     pallottole.Add((GameObject)Instantiate(Resources.Load("PallaDiFuoco"), new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity));
                     timer_shooting = 0;
-
+                    SoundManager.PlayFuoco();
                 }
 
             }
@@ -148,6 +154,7 @@ public class Keys : MonoBehaviour {
 
                 player_animator.SetBool("tail_attack", true);
 
+                SoundManager.PlayCodata();
             }
         }
 

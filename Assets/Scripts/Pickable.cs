@@ -22,10 +22,12 @@ public class Pickable : MonoBehaviour {
         if (moved)
         {
             rimuovi();
+            SoundManager.PlayOggetto();
         }
         else
         {
             aggiungi();
+            SoundManager.PlayOggetto();
         }
 
         moved = !moved;
