@@ -99,6 +99,8 @@ GameObject:
   - 64: {fileID: 6415244}
   - 114: {fileID: 11491064}
   - 114: {fileID: 11423514}
+  - 114: {fileID: 11400718}
+  - 114: {fileID: 11426738}
   m_Layer: 0
   m_Name: Cuscino
   m_TagString: Pickable
@@ -3622,6 +3624,18 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11400718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c73be15ff421749ac592721b082329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
 --- !u!114 &11417008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3655,6 +3669,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c813994566c31bf4eb7ea0cf16dcc41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritual_position: {x: 0, y: 0, z: 0}
+--- !u!114 &11426738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7fe6994c502b84ea1774532b22221d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ritual_position: {x: 0, y: 0, z: 0}
