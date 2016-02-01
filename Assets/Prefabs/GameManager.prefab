@@ -133,7 +133,13 @@ MonoBehaviour:
   sfx_presa_oggetto_corretta: {fileID: 8300000, guid: b7289f962d255a840b358d541da82965,
     type: 3}
   sfx_salto: {fileID: 8300000, guid: 1d9b5e781fca79a42870b8cf05372f96, type: 3}
+  into_demoniaco: {fileID: 8300000, guid: 99753d163cf528e4d9113862498706f5, type: 3}
+  loop_demoniaco: {fileID: 8300000, guid: bd6d41aebc797ce43bdff424fa4f16c4, type: 3}
+  intro_ghiaccio: {fileID: 8300000, guid: 7979a93c2d6755944b4364710d467790, type: 3}
+  loop_ghiaccio: {fileID: 8300000, guid: 05be9b601182476468ae74c5c7021f6e, type: 3}
+  loop_stanza: {fileID: 8300000, guid: ad0980d42d8d18249a37e41c3a14cc7a, type: 3}
   source: {fileID: 8276448}
+  source_ost: {fileID: 8276448}
 --- !u!114 &11480960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +169,31 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: loop_ghiaccio
+      value: 
+      objectReference: {fileID: 8300000, guid: 05be9b601182476468ae74c5c7021f6e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: loop_demoniaco
+      value: 
+      objectReference: {fileID: 8300000, guid: bd6d41aebc797ce43bdff424fa4f16c4, type: 3}
+    - target: {fileID: 0}
+      propertyPath: loop_stanza
+      value: 
+      objectReference: {fileID: 8300000, guid: ad0980d42d8d18249a37e41c3a14cc7a, type: 3}
+    - target: {fileID: 0}
+      propertyPath: intro_ghiaccio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7979a93c2d6755944b4364710d467790, type: 3}
+    - target: {fileID: 0}
+      propertyPath: into_demoniaco
+      value: 
+      objectReference: {fileID: 8300000, guid: 99753d163cf528e4d9113862498706f5, type: 3}
+    - target: {fileID: 0}
+      propertyPath: source_ost
+      value: 
+      objectReference: {fileID: 8276448}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 173130}

@@ -144,6 +144,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91c6e64c22db91f4f9e093a9bf1c998c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &518352219 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 106488, guid: 462ec626241a70d4d94f205c12f59aba, type: 2}
+  m_PrefabInternal: {fileID: 1520976056}
 --- !u!1001 &683024363
 Prefab:
   m_ObjectHideFlags: 0
@@ -182,6 +186,10 @@ Prefab:
     - target: {fileID: 453858, guid: d10cd84eee2981244bfce01efb115694, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 158788, guid: d10cd84eee2981244bfce01efb115694, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d10cd84eee2981244bfce01efb115694, type: 2}
@@ -390,6 +398,10 @@ Prefab:
       propertyPath: scene2d
       value: 
       objectReference: {fileID: 1516268982}
+    - target: {fileID: 11480960, guid: f897db58b556139449a5d31f419bc0d7, type: 2}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 518352219}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f897db58b556139449a5d31f419bc0d7, type: 2}
   m_IsPrefabParent: 0

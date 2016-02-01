@@ -10,7 +10,7 @@ public class Keys : MonoBehaviour {
     float lateral_speed = 20f;
     bool jumping = false;
     bool double_jumping = false;
-    float jumping_height = 5f;
+    float jumping_height = 7f;
     float jump_starting_y;
     float double_jump_starting_y;
     bool falling = false;

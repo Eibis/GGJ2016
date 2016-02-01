@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -43,12 +44,27 @@ public class GameManager : MonoBehaviour {
             scene3d.SetActive(true);
             scene2d.SetActive(false);
             crosshair.SetActive(true);
+
+            SoundManager.PlayStanza();
+
+
         }
         else
         {
             scene3d.SetActive(false);
             scene2d.SetActive(true);
             crosshair.SetActive(false);
+
+            Scene check_scene = SceneManager.GetActiveScene();
+
+            if (check_scene.name == "Level1" || check_scene.name == "Level3")
+            {
+                SoundManager.PlayIntroDemoniaco();
+            }
+            else
+            {
+                SoundManager.PlayIntroGhiaccio();
+            }
         }
 
         checkpoint = transform;
@@ -82,6 +98,19 @@ public class GameManager : MonoBehaviour {
                 scene3d.SetActive(false);
                 scene2d.SetActive(true);
                 crosshair.SetActive(false);
+
+                Scene check_scene = SceneManager.GetActiveScene();
+
+                if (check_scene.name == "Level1" || check_scene.name == "Level3")
+                {
+                    SoundManager.PlayIntroDemoniaco();
+                    SoundManager.PlayDemonio();
+                }
+                else
+                {
+                    SoundManager.PlayIntroGhiaccio();
+                    SoundManager.PlayGhiaccio();
+                }
             }
             else
             {
@@ -89,6 +118,8 @@ public class GameManager : MonoBehaviour {
                 scene3d.SetActive(true);
                 scene2d.SetActive(false);
                 crosshair.SetActive(true);
+                SoundManager.PlayStanza();
+                
             }
         }
     }
